@@ -3,6 +3,7 @@
 */
 
 grammar Lexer;
+output: keywords | datatype | separators | operators | identifier;
 
 //Keywords
 keywords: ASSERT
