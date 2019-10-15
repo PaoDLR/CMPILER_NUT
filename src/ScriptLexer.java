@@ -8,6 +8,9 @@ import java.io.FileInputStream;
 public class ScriptLexer {
 
     public static void main(String[] args) throws Exception {
+
+        File file = new File("C:\\Users\\Thomasraf\\IdeaProjects\\CMPILER_NUT\\testCode.txt");
+        
         System.out.println("Parsing: " + args[0]);
 
         FileInputStream fis = new FileInputStream(new File(args[0]));
