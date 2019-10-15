@@ -176,10 +176,6 @@ DIV_ASSIGN: '/=';
 WS: [ \t\r\n]+ -> skip;
 
 //Fragments
-NUMBER: Digits;
-ALPHABET: Letter;
-NUMORALPH: LetterOrDigit;
-
 fragment Digits: [0-9] ([0-9]* [0-9])?;
 fragment LetterOrDigit: Letter
                         |
@@ -191,9 +187,9 @@ fragment Letter: [a-zA-Z$_] // these are the "java letters" below 0x7F
 
 //Identifiers
 id: IDENTIFIER;
-IDENTIFIER: ALPHABET NUMORALPH*;
+IDENTIFIER: Letter LetterOrDigit*;
 
 //Literals
 DECIMAL_LITERAL: ('0' | [1-9] (Digits? | '_'+ Digits)) [lL]?;
-STRING_LITERAL: '"' ALPHABET NUMORALPH* '"';
+STRING_LITERAL: '"' IDENTIFIER '"';
 NULL_LITERAL: 'naida';

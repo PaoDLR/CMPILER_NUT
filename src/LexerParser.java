@@ -24,7 +24,8 @@ public class LexerParser extends Parser {
 		LT=37, BANG=38, COLON=39, EQUAL=40, LE=41, GE=42, NOTEQUAL=43, AND=44, 
 		OR=45, INC=46, DEC=47, ADD=48, SUB=49, MUL=50, DIV=51, MOD=52, ADD_ASSIGN=53, 
 		SUB_ASSIGN=54, MUL_ASSIGN=55, DIV_ASSIGN=56, WS=57, NUMBER=58, ALPHABET=59, 
-		NUMORALPH=60, IDENTIFIER=61, DECIMAL_LITERAL=62, STRING_LITERAL=63, NULL_LITERAL=64;
+		NUMORALPH=60, Digits=61, LetterOrDigit=62, Letter=63, IDENTIFIER=64, DECIMAL_LITERAL=65, 
+		STRING_LITERAL=66, NULL_LITERAL=67;
 	public static final int
 		RULE_output = 0, RULE_prule = 1, RULE_kw = 2, RULE_dt = 3, RULE_sp = 4, 
 		RULE_op = 5, RULE_id = 6;
@@ -44,7 +45,7 @@ public class LexerParser extends Parser {
 			"'['", "']'", "';'", "','", "'.'", null, "'='", "'>'", "'<'", "'!'", 
 			"':'", "'=='", "'<='", "'>='", "'!='", "'also'", "'or'", "'++'", "'--'", 
 			"'+'", "'-'", "'*'", "'/'", "'%'", "'+='", "'-='", "'*='", "'/='", null, 
-			null, null, null, null, null, null, "'naida'"
+			null, null, null, null, null, null, null, null, null, "'naida'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -57,8 +58,8 @@ public class LexerParser extends Parser {
 			"DOT", "OPERATORS", "ASSIGN", "GT", "LT", "BANG", "COLON", "EQUAL", "LE", 
 			"GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", 
 			"MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "WS", 
-			"NUMBER", "ALPHABET", "NUMORALPH", "IDENTIFIER", "DECIMAL_LITERAL", "STRING_LITERAL", 
-			"NULL_LITERAL"
+			"NUMBER", "ALPHABET", "NUMORALPH", "Digits", "LetterOrDigit", "Letter", 
+			"IDENTIFIER", "DECIMAL_LITERAL", "STRING_LITERAL", "NULL_LITERAL"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -424,7 +425,7 @@ public class LexerParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3B$\4\2\t\2\4\3\t\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3E$\4\2\t\2\4\3\t\3"+
 		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\3\2\3\2\3\2\3\2\5\2\26\n"+
 		"\2\3\3\3\3\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\b\3\b\3\b\2\2\t\2\4\6\b\n"+
 		"\f\16\2\2\2 \2\25\3\2\2\2\4\27\3\2\2\2\6\31\3\2\2\2\b\33\3\2\2\2\n\35"+
@@ -432,7 +433,7 @@ public class LexerParser extends Parser {
 		"\n\6\2\23\26\5\f\7\2\24\26\5\16\b\2\25\20\3\2\2\2\25\21\3\2\2\2\25\22"+
 		"\3\2\2\2\25\23\3\2\2\2\25\24\3\2\2\2\26\3\3\2\2\2\27\30\5\6\4\2\30\5\3"+
 		"\2\2\2\31\32\7\3\2\2\32\7\3\2\2\2\33\34\7\4\2\2\34\t\3\2\2\2\35\36\7\32"+
-		"\2\2\36\13\3\2\2\2\37 \7$\2\2 \r\3\2\2\2!\"\7?\2\2\"\17\3\2\2\2\3\25";
+		"\2\2\36\13\3\2\2\2\37 \7$\2\2 \r\3\2\2\2!\"\7B\2\2\"\17\3\2\2\2\3\25";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
