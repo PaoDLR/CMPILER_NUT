@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="" />
+    <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Lexer.g4" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +21,7 @@
     <property name="$PROJECT_DIR$/Lexer.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Lexer.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Lexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PE1/Code/CMPILERMP1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -52,7 +56,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

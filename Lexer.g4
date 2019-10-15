@@ -4,6 +4,8 @@
 
 grammar Lexer;
 output: keywords | datatype | separators | operators | identifier;
+prule: keywords;
+
 
 //Keywords
 keywords: ASSERT
