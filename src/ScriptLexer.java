@@ -10,7 +10,7 @@ public class ScriptLexer {
     public static void main(String[] args) throws Exception {
 
         File file = new File("C:\\Users\\Thomasraf\\IdeaProjects\\CMPILER_NUT\\testCode.txt");
-        
+
         System.out.println("Parsing: " + args[0]);
 
         FileInputStream fis = new FileInputStream(new File(args[0]));
@@ -33,16 +33,16 @@ public class ScriptLexer {
                 return "DECIMAL_LITERAL";
             case LexerLexer.NULL_LITERAL:
                 return "NULL_LITERAL";
-//            case LexerLexer.keywords:
-//                return "keywords";
-//            case LexerLexer.identifier:
-//                return "identifier";
-//            case LexerLexer.separators:
-//                return "separators;
-//            case LexerLexer.operators:
-//                return "operators";
-//            case LexerLexer.datatype:
-//                return "datatype";
+            case LexerLexer.KEYWORDS:
+                return "keywords";
+            case LexerLexer.IDENTIFIER:
+                return "identifier";
+            case LexerLexer.SEPARATORS:
+                return "separators";
+            case LexerLexer.OPERATORS:
+                return "operators";
+            case LexerLexer.DATATYPES:
+                return "datatype";
             default:
                 return "OTHER";
         }
