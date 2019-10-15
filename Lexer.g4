@@ -3,12 +3,13 @@
 */
 
 grammar Lexer;
-output: keywords | datatype | separators | operators | identifier;
-prule: keywords;
+output: kw | dt | sp | op | id;
+prule: kw;
 
 
 //Keywords
-keywords: ASSERT
+kw: KEYWORDS;
+KEYWORDS: ASSERT
           |
           BOOLEAN
           |
@@ -41,7 +42,8 @@ keywords: ASSERT
           WHILE;
 
  //Datatype
- datatype: CHAR
+ dt: DATATYPE;
+ DATATYPE: CHAR
            |
            DOUBLE
            |
@@ -72,7 +74,8 @@ VOID: 'kassadin';
 WHILE: 'during';
 
 //Separators
-separators: LPAREN
+sp: SEPARATORS;
+SEPARATORS: LPAREN
             |
             RPAREN
             |
@@ -101,7 +104,8 @@ COMMA: ',';
 DOT: '.';
 
 //Operators
-operators:  ASSIGN
+op: OPERATORS;
+OPERATORS:  ASSIGN
             |
             GT
             |
@@ -186,7 +190,8 @@ fragment Letter: [a-zA-Z$_] // these are the "java letters" below 0x7F
                  ;
 
 //Identifiers
-identifier: ALPHABET NUMORALPH*;
+id: IDENTIFIER;
+IDENTIFIER: ALPHABET NUMORALPH*;
 
 //Literals
 DECIMAL_LITERAL: ('0' | [1-9] (Digits? | '_'+ Digits)) [lL]?;

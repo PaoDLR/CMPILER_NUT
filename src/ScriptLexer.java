@@ -25,7 +25,7 @@ public class ScriptLexer {
         }
     }
 
-    private static String getTokenType(int tokenType) {
+    private static java.lang.String getTokenType(int tokenType) {
         switch (tokenType) {
             case LexerLexer.STRING_LITERAL:
                 return "STRING_LITERAL";
@@ -41,7 +41,7 @@ public class ScriptLexer {
                 return "separators";
             case LexerLexer.OPERATORS:
                 return "operators";
-            case LexerLexer.DATATYPES:
+            case LexerLexer.DATATYPE:
                 return "datatype";
             default:
                 return "OTHER";

@@ -7,53 +7,73 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface LexerListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link LexerParser#keywords}.
+	 * Enter a parse tree produced by {@link LexerParser#output}.
 	 * @param ctx the parse tree
 	 */
-	void enterKeywords(LexerParser.KeywordsContext ctx);
+	void enterOutput(LexerParser.OutputContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LexerParser#keywords}.
+	 * Exit a parse tree produced by {@link LexerParser#output}.
 	 * @param ctx the parse tree
 	 */
-	void exitKeywords(LexerParser.KeywordsContext ctx);
+	void exitOutput(LexerParser.OutputContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LexerParser#datatype}.
+	 * Enter a parse tree produced by {@link LexerParser#prule}.
 	 * @param ctx the parse tree
 	 */
-	void enterDatatype(LexerParser.DatatypeContext ctx);
+	void enterPrule(LexerParser.PruleContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LexerParser#datatype}.
+	 * Exit a parse tree produced by {@link LexerParser#prule}.
 	 * @param ctx the parse tree
 	 */
-	void exitDatatype(LexerParser.DatatypeContext ctx);
+	void exitPrule(LexerParser.PruleContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LexerParser#separators}.
+	 * Enter a parse tree produced by {@link LexerParser#kw}.
 	 * @param ctx the parse tree
 	 */
-	void enterSeparators(LexerParser.SeparatorsContext ctx);
+	void enterKw(LexerParser.KwContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LexerParser#separators}.
+	 * Exit a parse tree produced by {@link LexerParser#kw}.
 	 * @param ctx the parse tree
 	 */
-	void exitSeparators(LexerParser.SeparatorsContext ctx);
+	void exitKw(LexerParser.KwContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LexerParser#operators}.
+	 * Enter a parse tree produced by {@link LexerParser#dt}.
 	 * @param ctx the parse tree
 	 */
-	void enterOperators(LexerParser.OperatorsContext ctx);
+	void enterDt(LexerParser.DtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LexerParser#operators}.
+	 * Exit a parse tree produced by {@link LexerParser#dt}.
 	 * @param ctx the parse tree
 	 */
-	void exitOperators(LexerParser.OperatorsContext ctx);
+	void exitDt(LexerParser.DtContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LexerParser#identifier}.
+	 * Enter a parse tree produced by {@link LexerParser#sp}.
 	 * @param ctx the parse tree
 	 */
-	void enterIdentifier(LexerParser.IdentifierContext ctx);
+	void enterSp(LexerParser.SpContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LexerParser#identifier}.
+	 * Exit a parse tree produced by {@link LexerParser#sp}.
 	 * @param ctx the parse tree
 	 */
-	void exitIdentifier(LexerParser.IdentifierContext ctx);
+	void exitSp(LexerParser.SpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LexerParser#op}.
+	 * @param ctx the parse tree
+	 */
+	void enterOp(LexerParser.OpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LexerParser#op}.
+	 * @param ctx the parse tree
+	 */
+	void exitOp(LexerParser.OpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LexerParser#id}.
+	 * @param ctx the parse tree
+	 */
+	void enterId(LexerParser.IdContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LexerParser#id}.
+	 * @param ctx the parse tree
+	 */
+	void exitId(LexerParser.IdContext ctx);
 }

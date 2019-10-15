@@ -15,61 +15,85 @@ public class LexerBaseListener implements LexerListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKeywords(LexerParser.KeywordsContext ctx) { }
+	@Override public void enterOutput(LexerParser.OutputContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKeywords(LexerParser.KeywordsContext ctx) { }
+	@Override public void exitOutput(LexerParser.OutputContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDatatype(LexerParser.DatatypeContext ctx) { }
+	@Override public void enterPrule(LexerParser.PruleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDatatype(LexerParser.DatatypeContext ctx) { }
+	@Override public void exitPrule(LexerParser.PruleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSeparators(LexerParser.SeparatorsContext ctx) { }
+	@Override public void enterKw(LexerParser.KwContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSeparators(LexerParser.SeparatorsContext ctx) { }
+	@Override public void exitKw(LexerParser.KwContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOperators(LexerParser.OperatorsContext ctx) { }
+	@Override public void enterDt(LexerParser.DtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOperators(LexerParser.OperatorsContext ctx) { }
+	@Override public void exitDt(LexerParser.DtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIdentifier(LexerParser.IdentifierContext ctx) { }
+	@Override public void enterSp(LexerParser.SpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIdentifier(LexerParser.IdentifierContext ctx) { }
+	@Override public void exitSp(LexerParser.SpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOp(LexerParser.OpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOp(LexerParser.OpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterId(LexerParser.IdContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitId(LexerParser.IdContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
