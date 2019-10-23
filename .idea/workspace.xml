@@ -38,6 +38,15 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="ScriptLexer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ScriptLexer" />
+      <module name="CMPILER_NUT" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>

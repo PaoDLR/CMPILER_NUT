@@ -31,7 +31,11 @@ KEYWORDS: ASSERT
           |
           NEW
           |
+          PRINT
+          |
           RETURN
+          |
+          SCAN
           |
           STATIC
           |
@@ -49,7 +53,9 @@ KEYWORDS: ASSERT
            |
            FLOAT
            |
-           INT;
+           INT
+           |
+           STRING;
 
 ASSERT: 'tpose';
 BOOLEAN: 'maybe';
@@ -67,8 +73,11 @@ FOR: 'iv';
 IF: 'can';
 INT: 'digimon';
 NEW: 'new';
+PRINT: 'printing';
 RETURN: 'ups';
+SCAN: 'scan';
 STATIC: 'shiv';
+STRING: 'string';
 SWITCH: 'nintendo';
 VOID: 'kassadin';
 WHILE: 'during';
@@ -185,11 +194,28 @@ fragment Letter: [a-zA-Z$_] // these are the "java letters" below 0x7F
                  | [\uD800-\uDBFF] [\uDC00-\uDFFF] // covers UTF-16 surrogate pairs encodings for U+10000 to U+10FFFF
                  ;
 
+fragment EscapeSequence
+   : '\\' [btnfr"'\\]
+   | '\\' ([0-3]? [0-7])? [0-7]
+   | '\\' 'u'+ HexDigit HexDigit HexDigit HexDigit
+   ;
+
+fragment HexDigits
+    : HexDigit ((HexDigit | '_')* HexDigit)?
+    ;
+fragment HexDigit
+    : [0-9a-fA-F]
+    ;
+
+
 //Identifiers
 id: IDENTIFIER;
 IDENTIFIER: Letter LetterOrDigit*;
 
 //Literals
 DECIMAL_LITERAL: ('0' | [1-9] (Digits? | '_'+ Digits)) [lL]?;
-STRING_LITERAL: '"' IDENTIFIER '"';
+STRING_LITERAL: '"' (~["\\\r\n] | EscapeSequence)* '"';
 NULL_LITERAL: 'naida';
+BOOLEAN_LITERAL: 'true' | 'false';
+COMMENT:            '/*' .*? '*/'    -> channel(HIDDEN);
+LINE_COMMENT:       '//' ~[\r\n]*    -> channel(HIDDEN);

@@ -18,14 +18,14 @@ public class LexerParser extends Parser {
 	public static final int
 		KEYWORDS=1, DATATYPE=2, ASSERT=3, BOOLEAN=4, BREAK=5, CASE=6, CHAR=7, 
 		CONST=8, DEFAULT=9, DO=10, DOUBLE=11, ELSE=12, FINAL=13, FLOAT=14, FOR=15, 
-		IF=16, INT=17, NEW=18, RETURN=19, STATIC=20, SWITCH=21, VOID=22, WHILE=23, 
-		SEPARATORS=24, LPAREN=25, RPAREN=26, LBRACE=27, RBRACE=28, LBRACK=29, 
-		RBRACK=30, SEMI=31, COMMA=32, DOT=33, OPERATORS=34, ASSIGN=35, GT=36, 
-		LT=37, BANG=38, COLON=39, EQUAL=40, LE=41, GE=42, NOTEQUAL=43, AND=44, 
-		OR=45, INC=46, DEC=47, ADD=48, SUB=49, MUL=50, DIV=51, MOD=52, ADD_ASSIGN=53, 
-		SUB_ASSIGN=54, MUL_ASSIGN=55, DIV_ASSIGN=56, WS=57, NUMBER=58, ALPHABET=59, 
-		NUMORALPH=60, Digits=61, LetterOrDigit=62, Letter=63, IDENTIFIER=64, DECIMAL_LITERAL=65, 
-		STRING_LITERAL=66, NULL_LITERAL=67;
+		IF=16, INT=17, NEW=18, PRINT=19, RETURN=20, SCAN=21, STATIC=22, STRING=23, 
+		SWITCH=24, VOID=25, WHILE=26, SEPARATORS=27, LPAREN=28, RPAREN=29, LBRACE=30, 
+		RBRACE=31, LBRACK=32, RBRACK=33, SEMI=34, COMMA=35, DOT=36, OPERATORS=37, 
+		ASSIGN=38, GT=39, LT=40, BANG=41, COLON=42, EQUAL=43, LE=44, GE=45, NOTEQUAL=46, 
+		AND=47, OR=48, INC=49, DEC=50, ADD=51, SUB=52, MUL=53, DIV=54, MOD=55, 
+		ADD_ASSIGN=56, SUB_ASSIGN=57, MUL_ASSIGN=58, DIV_ASSIGN=59, WS=60, IDENTIFIER=61, 
+		DECIMAL_LITERAL=62, STRING_LITERAL=63, NULL_LITERAL=64, BOOLEAN_LITERAL=65, 
+		COMMENT=66, LINE_COMMENT=67;
 	public static final int
 		RULE_output = 0, RULE_prule = 1, RULE_kw = 2, RULE_dt = 3, RULE_sp = 4, 
 		RULE_op = 5, RULE_id = 6;
@@ -40,12 +40,12 @@ public class LexerParser extends Parser {
 		return new String[] {
 			null, null, null, "'tpose'", "'maybe'", "'ubreak'", "'case'", "'charot'", 
 			"'ant'", "'standard'", "'glaz'", "'twice'", "'unless'", "'fantasy'", 
-			"'drown'", "'iv'", "'can'", "'digimon'", "'new'", "'ups'", "'shiv'", 
-			"'nintendo'", "'kassadin'", "'during'", null, "'('", "')'", "'{'", "'}'", 
-			"'['", "']'", "';'", "','", "'.'", null, "'='", "'>'", "'<'", "'!'", 
-			"':'", "'=='", "'<='", "'>='", "'!='", "'also'", "'or'", "'++'", "'--'", 
-			"'+'", "'-'", "'*'", "'/'", "'%'", "'+='", "'-='", "'*='", "'/='", null, 
-			null, null, null, null, null, null, null, null, null, "'naida'"
+			"'drown'", "'iv'", "'can'", "'digimon'", "'new'", "'printing'", "'ups'", 
+			"'scan'", "'shiv'", "'string'", "'nintendo'", "'kassadin'", "'during'", 
+			null, "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", "'.'", 
+			null, "'='", "'>'", "'<'", "'!'", "':'", "'=='", "'<='", "'>='", "'!='", 
+			"'also'", "'or'", "'++'", "'--'", "'+'", "'-'", "'*'", "'/'", "'%'", 
+			"'+='", "'-='", "'*='", "'/='", null, null, null, null, "'naida'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -53,13 +53,13 @@ public class LexerParser extends Parser {
 		return new String[] {
 			null, "KEYWORDS", "DATATYPE", "ASSERT", "BOOLEAN", "BREAK", "CASE", "CHAR", 
 			"CONST", "DEFAULT", "DO", "DOUBLE", "ELSE", "FINAL", "FLOAT", "FOR", 
-			"IF", "INT", "NEW", "RETURN", "STATIC", "SWITCH", "VOID", "WHILE", "SEPARATORS", 
-			"LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", 
-			"DOT", "OPERATORS", "ASSIGN", "GT", "LT", "BANG", "COLON", "EQUAL", "LE", 
-			"GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", 
-			"MOD", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "WS", 
-			"NUMBER", "ALPHABET", "NUMORALPH", "Digits", "LetterOrDigit", "Letter", 
-			"IDENTIFIER", "DECIMAL_LITERAL", "STRING_LITERAL", "NULL_LITERAL"
+			"IF", "INT", "NEW", "PRINT", "RETURN", "SCAN", "STATIC", "STRING", "SWITCH", 
+			"VOID", "WHILE", "SEPARATORS", "LPAREN", "RPAREN", "LBRACE", "RBRACE", 
+			"LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", "OPERATORS", "ASSIGN", "GT", 
+			"LT", "BANG", "COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", "OR", 
+			"INC", "DEC", "ADD", "SUB", "MUL", "DIV", "MOD", "ADD_ASSIGN", "SUB_ASSIGN", 
+			"MUL_ASSIGN", "DIV_ASSIGN", "WS", "IDENTIFIER", "DECIMAL_LITERAL", "STRING_LITERAL", 
+			"NULL_LITERAL", "BOOLEAN_LITERAL", "COMMENT", "LINE_COMMENT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -432,8 +432,8 @@ public class LexerParser extends Parser {
 		"\3\2\2\2\f\37\3\2\2\2\16!\3\2\2\2\20\26\5\6\4\2\21\26\5\b\5\2\22\26\5"+
 		"\n\6\2\23\26\5\f\7\2\24\26\5\16\b\2\25\20\3\2\2\2\25\21\3\2\2\2\25\22"+
 		"\3\2\2\2\25\23\3\2\2\2\25\24\3\2\2\2\26\3\3\2\2\2\27\30\5\6\4\2\30\5\3"+
-		"\2\2\2\31\32\7\3\2\2\32\7\3\2\2\2\33\34\7\4\2\2\34\t\3\2\2\2\35\36\7\32"+
-		"\2\2\36\13\3\2\2\2\37 \7$\2\2 \r\3\2\2\2!\"\7B\2\2\"\17\3\2\2\2\3\25";
+		"\2\2\2\31\32\7\3\2\2\32\7\3\2\2\2\33\34\7\4\2\2\34\t\3\2\2\2\35\36\7\35"+
+		"\2\2\36\13\3\2\2\2\37 \7\'\2\2 \r\3\2\2\2!\"\7?\2\2\"\17\3\2\2\2\3\25";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
