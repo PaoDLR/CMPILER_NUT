@@ -3,7 +3,7 @@ digimon  x = 0;
 scan("Hello. I need your number: "x); //syntax error
 
 iv(digimon i; i< 10; i+=1){
-	printing("Yes " +x+); //syntax error
+	printing("Yes " +x+) //syntax error
 	
 	x =5x; //syntax error
 }
