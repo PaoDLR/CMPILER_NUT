@@ -11,7 +11,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 public class ParserTree {
     public static void main(String[] args) throws IOException {
         //prepare token stream
-        CharStream stream = CharStreams.fromFileName("C:\\Users\\GeneralTank\\Documents\\4th Year 1st Term\\CMPILER\\CMPILER_NUT\\parser_test_case.txt");
+        CharStream stream = CharStreams.fromFileName("C:\\Users\\GeneralTank\\Documents\\College\\College 4th Year 1st Term\\CMPILER\\MP1\\CMPILER_NUT\\parser_test_case.txt");
         NutLexer lexer  = new NutLexer(stream);
         lexer.removeErrorListeners();
         lexer.addErrorListener(new NutErrorListener());
@@ -43,11 +43,13 @@ public class ParserTree {
                 throws ParseCancellationException {
             String err = msg.split("'")[1];
             if(msg.contains("missing"))
-                System.err.println("Syntax Error at Line " + line + " missing " + err);
+                System.err.println("Syntax Error at Line " + line + " - missing " + err + ".");
             else if(msg.contains("extraneous input"))
-                System.err.println("Syntax Error at Line " + line + " extra character/s " + err);
+                System.err.println("Syntax Error at Line " + line + " - extra character/s " + err + ".");
             else if(msg.contains("mismatched input"))
-                System.err.println("Syntax Error at Line " + line + " unexpected " + err);
+                System.err.println("Syntax Error at Line " + line + " - unexpected " + err + ".");
+            else if(msg.contains("token recognition"))
+                System.err.println("Syntax Error at Line " + line + " - token " + err + " not recognized.");
             else
                 System.err.println(msg);
 
