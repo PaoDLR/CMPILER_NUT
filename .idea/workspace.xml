@@ -20,8 +20,12 @@
     <property name="$PROJECT_DIR$/Lexer.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Lexer.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Lexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/Parser.g4::/auto-gen" value="true" />
+    <property name="$PROJECT_DIR$/Parser.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/Parser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/parser_test_case.txt" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
