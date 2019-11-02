@@ -11,7 +11,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 public class ParserTree {
     public static void main(String[] args) throws IOException {
         //prepare token stream
-        CharStream stream = CharStreams.fromFileName("C:\\Users\\GeneralTank\\Documents\\4th Year 1st Term\\CMPILER\\CMPILER_NUT\\parser_test_case.txt");
+        CharStream stream = CharStreams.fromFileName("C:\\Users\\Thomasraf\\IdeaProjects\\CMPILER_NUT\\parser_test_case.txt");
         NutLexer lexer  = new NutLexer(stream);
         lexer.removeErrorListeners();
         lexer.addErrorListener(new NutErrorListener());

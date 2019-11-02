@@ -39,7 +39,7 @@ classDeclaration
       classBody
     ;
 
-typeParameters
+typeParameters //WE DON'T KNOW
     : '<' typeParameter (',' typeParameter)* '>'
     ;
 
