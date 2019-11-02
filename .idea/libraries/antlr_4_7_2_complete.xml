@@ -5,5 +5,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <excluded>
+      <root url="jar://$PROJECT_DIR$/antlr-4.7.2-complete.jar!/" />
+    </excluded>
   </library>
 </component>

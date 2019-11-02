@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_4_7_2_complete.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_7_2_complete.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutLexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutLexer.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
@@ -53,7 +54,7 @@
     <property name="$PROJECT_DIR$/Parser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Parser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
