@@ -19,7 +19,7 @@ public class ParserTree {
         NutParser parser = new NutParser(tokenStream);
         parser.removeErrorListeners();
         parser.addErrorListener(new NutErrorListener());
-        ParseTree tree = parser.compilationUnit();
+        ParseTree tree = parser.startCode();
 
         //show AST in console
         System.out.println(tree.toStringTree(parser));
@@ -48,9 +48,6 @@ public class ParserTree {
                 System.err.println("Syntax Error at Line " + line + " - extra character/s " + err + ".");
             else if(msg.contains("mismatched input"))
                 System.err.println("Syntax Error at Line " + line + " unexpected " + err);
-            else if(msg.contains("no viable alternative at input")){
-                System.err.println("Syntax Error at Line " + line + " missing \"\"");
-            }
             else
                 System.err.println(msg);
 
