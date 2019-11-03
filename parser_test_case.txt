@@ -1,4 +1,5 @@
-kassadin testOne(){
+expose sleep testCode{
+    kassadin testOne(){
 
     digimon x = 0;
     scan("Hello. I need your number: ", x);
@@ -7,6 +8,7 @@ kassadin testOne(){
         printing("Yes" +x+);
 
         x = 5x;
+    }
     }
 
     kassadin testTwo(drowning x){
