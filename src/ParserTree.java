@@ -54,8 +54,8 @@ public class ParserTree {
             else if(msg.contains("cannot find symbol")){
                 System.err.println("Logical Error at Line " + line + " missing symbol " + err);
             }
-            else if(msg.contains("variable reader might not have been initialized")){
-                System.err.println("");
+            else if(msg.contains("variable might not have been initialized")){
+                System.err.println("Syntax Error at Line" + line + "variable " + err + " is missing initialization");
             }
             else
                 System.err.println(msg);
