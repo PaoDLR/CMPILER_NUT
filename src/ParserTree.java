@@ -57,6 +57,12 @@ public class ParserTree {
             else if(msg.contains("variable might not have been initialized")){
                 System.err.println("Syntax Error at Line" + line + "variable " + err + " is missing initialization");
             }
+            else if(msg.contains("ArrayIndexOutOfBoundsException")){
+                System.err.println("Exception in thread due to trying to access the array at" + err + " which does not exist");
+            }
+            else if(msg.contains("Cannot resolve symbol")){
+                System.err.println("The variable " + err + " does not exist yet and cannot be accessed");
+            }
             else
                 System.err.println(msg);
 
