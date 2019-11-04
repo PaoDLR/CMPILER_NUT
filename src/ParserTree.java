@@ -51,6 +51,12 @@ public class ParserTree {
             else if(msg.contains("no viable alternative at input")){
                 System.err.println("Syntax Error at Line " + line + " missing \"\"");
             }
+            else if(msg.contains("cannot find symbol")){
+                System.err.println("Logical Error at Line " + line + " missing symbol " + err);
+            }
+            else if(msg.contains("variable reader might not have been initialized")){
+                System.err.println("");
+            }
             else
                 System.err.println(msg);
 
