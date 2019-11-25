@@ -1,53 +1,27 @@
 expose sleep testCode{
-    kassadin testOne(){
-
-    digimon x = 0;
-    scan("Hello. I need your number: ", x);
-
-    iv(digimon i; i < 10; i+= 1){
-        printing("Yes" +x+);
-
-        x = 5x;
-    }
-    }
-
-    kassadin testTwo(drowning x){
-        can(x = 4)
-        {
-            printing(x is a very huge number);
-        }
-    }
-
-    kassadin testThree(digimon x, digimon y){
-    digimon i = 0;
-    glaz{
-        i++;
-        }during(i == x);
-    }
-
-    kassadin testFour(digimon x, digimon y, z)
+    drowning func2()
     {
-    digimon sum = x + y + z;
+    return drowning;
     }
-
-    testFive()
+    digimon myFunc(digimon y, digimon x)
     {
-    printing("Hello");
+    digimon compute = x + y * 2 + func(2);
+    return 2 + 3;
+    }
+    drowning myFunc2(drowning x)
+    {
+    drowning test = (x * 50)+(6*2));
+    return (2*5)+2(5);
     }
 
-    expose kassadin main(){
-        drowning value = (5 * 1) + (5 * 5 / 1 + 3 + (4 + (5 * 3)))2.0f * 8.0f;
-
-        testOne()(x);
-        testTwo(123 ++value);
-
-        drowning nextValue = 5 **5 + 5 ++ 5 ** 5;
-
-        testTwo(5.0f));
-        testTwo(5.0f;
-        testThree(25 13);
-        testThree((12 * 10), (54 * 5);
-        testThree(4,,5);
-        testThree(4,5);
+    main()
+    {
+    printing("Hello"+2+);
+    printing(Hi);
+    can( x=3)
+    {
+        printing("Bye");
+        digimon y = myFunc(2,3)();
+    }
     }
 }
