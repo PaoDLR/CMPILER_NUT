@@ -33,7 +33,6 @@ STRING: 'string';
 SWITCH: 'nintendo';
 VOID: 'kassadin';
 WHILE: 'during';
-MAIN: 'main';
 
 //Separators
 LPAREN: '(';

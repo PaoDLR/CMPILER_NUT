@@ -1,4 +1,4 @@
-// Generated from C:/Users/Thomasraf/IdeaProjects/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
+// Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -188,6 +188,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitCompilationUnit(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitCompilationUnit(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CompilationUnitContext compilationUnit() throws RecognitionException {
@@ -254,6 +259,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -354,6 +364,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitModifier(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitModifier(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ModifierContext modifier() throws RecognitionException {
@@ -396,6 +411,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassOrInterfaceModifier(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassOrInterfaceModifier(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -473,6 +493,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitVariableModifier(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitVariableModifier(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final VariableModifierContext variableModifier() throws RecognitionException {
@@ -531,6 +556,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -594,6 +624,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeParameters(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeParameters(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -659,6 +694,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeParameter(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeParameter(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeParameterContext typeParameter() throws RecognitionException {
@@ -719,6 +759,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeBound(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeBound(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -781,6 +826,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InterfaceDeclarationContext interfaceDeclaration() throws RecognitionException {
@@ -839,6 +889,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -900,6 +955,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -967,6 +1027,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassBodyDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassBodyDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1075,6 +1140,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitMemberDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitMemberDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1185,6 +1255,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitMethodDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitMethodDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final MethodDeclarationContext methodDeclaration() throws RecognitionException {
@@ -1248,6 +1323,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitMethodBody(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitMethodBody(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final MethodBodyContext methodBody() throws RecognitionException {
@@ -1302,6 +1382,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeTypeOrVoid(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeTypeOrVoid(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1367,6 +1452,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitGenericMethodDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitGenericMethodDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final GenericMethodDeclarationContext genericMethodDeclaration() throws RecognitionException {
@@ -1410,6 +1500,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitGenericConstructorDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitGenericConstructorDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1457,6 +1552,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitConstructorDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitConstructorDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ConstructorDeclarationContext constructorDeclaration() throws RecognitionException {
@@ -1503,6 +1603,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitFieldDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitFieldDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1553,6 +1658,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceBodyDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceBodyDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1656,6 +1766,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceMemberDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceMemberDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InterfaceMemberDeclarationContext interfaceMemberDeclaration() throws RecognitionException {
@@ -1747,6 +1862,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitConstDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitConstDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ConstDeclarationContext constDeclaration() throws RecognitionException {
@@ -1816,6 +1936,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitConstantDeclarator(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitConstantDeclarator(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1906,6 +2031,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceMethodDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceMethodDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2031,6 +2161,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInterfaceMethodModifier(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInterfaceMethodModifier(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InterfaceMethodModifierContext interfaceMethodModifier() throws RecognitionException {
@@ -2102,6 +2237,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitGenericInterfaceMethodDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitGenericInterfaceMethodDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final GenericInterfaceMethodDeclarationContext genericInterfaceMethodDeclaration() throws RecognitionException {
@@ -2149,6 +2289,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitVariableDeclarators(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitVariableDeclarators(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2210,6 +2355,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitVariableDeclarator(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitVariableDeclarator(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final VariableDeclaratorContext variableDeclarator() throws RecognitionException {
@@ -2267,6 +2417,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitVariableDeclaratorId(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitVariableDeclaratorId(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2326,6 +2481,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitVariableInitializer(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitVariableInitializer(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2413,6 +2573,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitArrayInitializer(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitArrayInitializer(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2506,6 +2671,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassOrInterfaceType(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassOrInterfaceType(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ClassOrInterfaceTypeContext classOrInterfaceType() throws RecognitionException {
@@ -2586,6 +2756,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeArgument(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeArgument(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeArgumentContext typeArgument() throws RecognitionException {
@@ -2654,6 +2829,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitQualifiedNameList(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitQualifiedNameList(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final QualifiedNameListContext qualifiedNameList() throws RecognitionException {
@@ -2711,6 +2891,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitFormalParameters(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitFormalParameters(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2773,6 +2958,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitFormalParameterList(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitFormalParameterList(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2867,6 +3057,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitFormalParameter(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitFormalParameter(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final FormalParameterContext formalParameter() throws RecognitionException {
@@ -2935,6 +3130,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitLastFormalParameter(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitLastFormalParameter(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final LastFormalParameterContext lastFormalParameter() throws RecognitionException {
@@ -3000,6 +3200,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitQualifiedName(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitQualifiedName(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final QualifiedNameContext qualifiedName() throws RecognitionException {
@@ -3061,6 +3266,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitLiteral(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitLiteral(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3142,6 +3352,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitIntegerLiteral(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitIntegerLiteral(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final IntegerLiteralContext integerLiteral() throws RecognitionException {
@@ -3188,6 +3403,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitFloatLiteral(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitFloatLiteral(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3245,6 +3465,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotation(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotation(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3323,6 +3548,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitElementValuePairs(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitElementValuePairs(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ElementValuePairsContext elementValuePairs() throws RecognitionException {
@@ -3381,6 +3611,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitElementValuePair(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitElementValuePair(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ElementValuePairContext elementValuePair() throws RecognitionException {
@@ -3429,6 +3664,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitElementValue(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitElementValue(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3497,6 +3737,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitElementValueArrayInitializer(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitElementValueArrayInitializer(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3582,6 +3827,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationTypeDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationTypeDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AnnotationTypeDeclarationContext annotationTypeDeclaration() throws RecognitionException {
@@ -3631,6 +3881,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationTypeBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationTypeBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3694,6 +3949,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationTypeElementDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationTypeElementDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3791,6 +4051,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationTypeElementRest(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationTypeElementRest(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3895,6 +4160,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationMethodOrConstantRest(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationMethodOrConstantRest(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AnnotationMethodOrConstantRestContext annotationMethodOrConstantRest() throws RecognitionException {
@@ -3950,6 +4220,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationMethodRest(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationMethodRest(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AnnotationMethodRestContext annotationMethodRest() throws RecognitionException {
@@ -4004,6 +4279,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitAnnotationConstantRest(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitAnnotationConstantRest(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AnnotationConstantRestContext annotationConstantRest() throws RecognitionException {
@@ -4043,6 +4323,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitDefaultValue(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitDefaultValue(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4090,6 +4375,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final BlockContext block() throws RecognitionException {
@@ -4104,7 +4394,7 @@ public class NutParser extends Parser {
 			setState(642);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ASSERT) | (1L << BOOLEAN) | (1L << BREAK) | (1L << CHAR) | (1L << CLASS) | (1L << DO) | (1L << DOUBLE) | (1L << FINAL) | (1L << FLOAT) | (1L << FOR) | (1L << IF) | (1L << INT) | (1L << INTERFACE) | (1L << NEW) | (1L << PRIVATE) | (1L << PUBLIC) | (1L << RETURN) | (1L << STATIC) | (1L << STRING) | (1L << SWITCH) | (1L << VOID) | (1L << WHILE) | (1L << LPAREN) | (1L << LBRACE) | (1L << SEMI) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ASSERT) | (1L << BOOLEAN) | (1L << BREAK) | (1L << CHAR) | (1L << CLASS) | (1L << DO) | (1L << DOUBLE) | (1L << FINAL) | (1L << FLOAT) | (1L << FOR) | (1L << IF) | (1L << INT) | (1L << INTERFACE) | (1L << NEW) | (1L << PRINT) | (1L << PRIVATE) | (1L << PUBLIC) | (1L << RETURN) | (1L << STATIC) | (1L << STRING) | (1L << SWITCH) | (1L << VOID) | (1L << WHILE) | (1L << LPAREN) | (1L << LBRACE) | (1L << SEMI) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 				{
 				{
 				setState(639);
@@ -4152,6 +4442,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitBlockStatement(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitBlockStatement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4223,6 +4518,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitLocalVariableDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitLocalVariableDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final LocalVariableDeclarationContext localVariableDeclaration() throws RecognitionException {
@@ -4290,6 +4590,11 @@ public class NutParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitLocalTypeDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitLocalTypeDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4419,6 +4724,10 @@ public class NutParser extends Parser {
 		public TerminalNode RETURN() { return getToken(NutParser.RETURN, 0); }
 		public TerminalNode BREAK() { return getToken(NutParser.BREAK, 0); }
 		public TerminalNode IDENTIFIER() { return getToken(NutParser.IDENTIFIER, 0); }
+		public TerminalNode PRINT() { return getToken(NutParser.PRINT, 0); }
+		public LiteralContext literal() {
+			return getRuleContext(LiteralContext.class,0);
+		}
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -4431,6 +4740,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitStatement(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitStatement(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final StatementContext statement() throws RecognitionException {
@@ -4439,7 +4753,7 @@ public class NutParser extends Parser {
 		int _la;
 		try {
 			int _alt;
-			setState(742);
+			setState(748);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,78,_ctx) ) {
 			case 1:
@@ -4628,19 +4942,34 @@ public class NutParser extends Parser {
 				enterOuterAlt(_localctx, 11);
 				{
 				setState(736);
-				((StatementContext)_localctx).statementExpression = expression(0);
+				match(PRINT);
 				setState(737);
+				match(LPAREN);
+				setState(738);
+				literal();
+				setState(739);
+				match(RPAREN);
+				setState(740);
 				match(SEMI);
 				}
 				break;
 			case 12:
 				enterOuterAlt(_localctx, 12);
 				{
-				setState(739);
+				setState(742);
+				((StatementContext)_localctx).statementExpression = expression(0);
+				setState(743);
+				match(SEMI);
+				}
+				break;
+			case 13:
+				enterOuterAlt(_localctx, 13);
+				{
+				setState(745);
 				((StatementContext)_localctx).identifierLabel = match(IDENTIFIER);
-				setState(740);
+				setState(746);
 				match(COLON);
-				setState(741);
+				setState(747);
 				statement();
 				}
 				break;
@@ -4676,6 +5005,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitResourceSpecification(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitResourceSpecification(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ResourceSpecificationContext resourceSpecification() throws RecognitionException {
@@ -4685,21 +5019,21 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(744);
+			setState(750);
 			match(LPAREN);
-			setState(745);
+			setState(751);
 			resources();
-			setState(747);
+			setState(753);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==SEMI) {
 				{
-				setState(746);
+				setState(752);
 				match(SEMI);
 				}
 			}
 
-			setState(749);
+			setState(755);
 			match(RPAREN);
 			}
 		}
@@ -4737,6 +5071,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitResources(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitResources(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ResourcesContext resources() throws RecognitionException {
@@ -4746,23 +5085,23 @@ public class NutParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(751);
+			setState(757);
 			resource();
-			setState(756);
+			setState(762);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,80,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(752);
+					setState(758);
 					match(SEMI);
-					setState(753);
+					setState(759);
 					resource();
 					}
 					} 
 				}
-				setState(758);
+				setState(764);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,80,_ctx);
 			}
@@ -4808,6 +5147,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitResource(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitResource(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ResourceContext resource() throws RecognitionException {
@@ -4817,27 +5161,27 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(762);
+			setState(768);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==FINAL || _la==AT) {
 				{
 				{
-				setState(759);
+				setState(765);
 				variableModifier();
 				}
 				}
-				setState(764);
+				setState(770);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(765);
+			setState(771);
 			classOrInterfaceType();
-			setState(766);
+			setState(772);
 			variableDeclaratorId();
-			setState(767);
+			setState(773);
 			match(ASSIGN);
-			setState(768);
+			setState(774);
 			expression(0);
 			}
 		}
@@ -4877,6 +5221,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitSwitchBlockStatementGroup(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitSwitchBlockStatementGroup(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SwitchBlockStatementGroupContext switchBlockStatementGroup() throws RecognitionException {
@@ -4886,34 +5235,34 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(771); 
+			setState(777); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(770);
+				setState(776);
 				switchLabel();
 				}
 				}
-				setState(773); 
+				setState(779); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==CASE || _la==DEFAULT );
-			setState(776); 
+			setState(782); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(775);
+				setState(781);
 				blockStatement();
 				}
 				}
-				setState(778); 
+				setState(784); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ASSERT) | (1L << BOOLEAN) | (1L << BREAK) | (1L << CHAR) | (1L << CLASS) | (1L << DO) | (1L << DOUBLE) | (1L << FINAL) | (1L << FLOAT) | (1L << FOR) | (1L << IF) | (1L << INT) | (1L << INTERFACE) | (1L << NEW) | (1L << PRIVATE) | (1L << PUBLIC) | (1L << RETURN) | (1L << STATIC) | (1L << STRING) | (1L << SWITCH) | (1L << VOID) | (1L << WHILE) | (1L << LPAREN) | (1L << LBRACE) | (1L << SEMI) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ASSERT) | (1L << BOOLEAN) | (1L << BREAK) | (1L << CHAR) | (1L << CLASS) | (1L << DO) | (1L << DOUBLE) | (1L << FINAL) | (1L << FLOAT) | (1L << FOR) | (1L << IF) | (1L << INT) | (1L << INTERFACE) | (1L << NEW) | (1L << PRINT) | (1L << PRIVATE) | (1L << PUBLIC) | (1L << RETURN) | (1L << STATIC) | (1L << STRING) | (1L << SWITCH) | (1L << VOID) | (1L << WHILE) | (1L << LPAREN) | (1L << LBRACE) | (1L << SEMI) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -4949,46 +5298,51 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitSwitchLabel(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitSwitchLabel(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SwitchLabelContext switchLabel() throws RecognitionException {
 		SwitchLabelContext _localctx = new SwitchLabelContext(_ctx, getState());
 		enterRule(_localctx, 132, RULE_switchLabel);
 		try {
-			setState(788);
+			setState(794);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case CASE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(780);
+				setState(786);
 				match(CASE);
-				setState(783);
+				setState(789);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,84,_ctx) ) {
 				case 1:
 					{
-					setState(781);
+					setState(787);
 					((SwitchLabelContext)_localctx).constantExpression = expression(0);
 					}
 					break;
 				case 2:
 					{
-					setState(782);
+					setState(788);
 					((SwitchLabelContext)_localctx).enumConstantName = match(IDENTIFIER);
 					}
 					break;
 				}
-				setState(785);
+				setState(791);
 				match(COLON);
 				}
 				break;
 			case DEFAULT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(786);
+				setState(792);
 				match(DEFAULT);
-				setState(787);
+				setState(793);
 				match(COLON);
 				}
 				break;
@@ -5037,6 +5391,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitForControl(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitForControl(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ForControlContext forControl() throws RecognitionException {
@@ -5044,49 +5403,49 @@ public class NutParser extends Parser {
 		enterRule(_localctx, 134, RULE_forControl);
 		int _la;
 		try {
-			setState(802);
+			setState(808);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,89,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(790);
+				setState(796);
 				enhancedForControl();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(792);
+				setState(798);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FINAL) | (1L << FLOAT) | (1L << INT) | (1L << NEW) | (1L << STRING) | (1L << VOID) | (1L << LPAREN) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 					{
-					setState(791);
+					setState(797);
 					forInit();
 					}
 				}
 
-				setState(794);
+				setState(800);
 				match(SEMI);
-				setState(796);
+				setState(802);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FLOAT) | (1L << INT) | (1L << NEW) | (1L << STRING) | (1L << VOID) | (1L << LPAREN) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 					{
-					setState(795);
+					setState(801);
 					expression(0);
 					}
 				}
 
-				setState(798);
+				setState(804);
 				match(SEMI);
-				setState(800);
+				setState(806);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FLOAT) | (1L << INT) | (1L << NEW) | (1L << STRING) | (1L << VOID) | (1L << LPAREN) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 					{
-					setState(799);
+					setState(805);
 					((ForControlContext)_localctx).forUpdate = expressionList();
 					}
 				}
@@ -5125,26 +5484,31 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitForInit(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitForInit(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ForInitContext forInit() throws RecognitionException {
 		ForInitContext _localctx = new ForInitContext(_ctx, getState());
 		enterRule(_localctx, 136, RULE_forInit);
 		try {
-			setState(806);
+			setState(812);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,90,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(804);
+				setState(810);
 				localVariableDeclaration();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(805);
+				setState(811);
 				expressionList();
 				}
 				break;
@@ -5190,6 +5554,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitEnhancedForControl(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitEnhancedForControl(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final EnhancedForControlContext enhancedForControl() throws RecognitionException {
@@ -5199,29 +5568,29 @@ public class NutParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(811);
+			setState(817);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,91,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(808);
+					setState(814);
 					variableModifier();
 					}
 					} 
 				}
-				setState(813);
+				setState(819);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,91,_ctx);
 			}
-			setState(814);
+			setState(820);
 			typeType();
-			setState(815);
+			setState(821);
 			variableDeclaratorId();
-			setState(816);
+			setState(822);
 			match(COLON);
-			setState(817);
+			setState(823);
 			expression(0);
 			}
 		}
@@ -5254,6 +5623,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitParExpression(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitParExpression(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ParExpressionContext parExpression() throws RecognitionException {
@@ -5262,11 +5636,11 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(819);
+			setState(825);
 			match(LPAREN);
-			setState(820);
+			setState(826);
 			expression(0);
-			setState(821);
+			setState(827);
 			match(RPAREN);
 			}
 		}
@@ -5304,6 +5678,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitExpressionList(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitExpressionList(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ExpressionListContext expressionList() throws RecognitionException {
@@ -5313,21 +5692,21 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(823);
+			setState(829);
 			expression(0);
-			setState(828);
+			setState(834);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(824);
+				setState(830);
 				match(COMMA);
-				setState(825);
+				setState(831);
 				expression(0);
 				}
 				}
-				setState(830);
+				setState(836);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -5363,6 +5742,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitMethodCall(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitMethodCall(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final MethodCallContext methodCall() throws RecognitionException {
@@ -5372,21 +5756,21 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(831);
+			setState(837);
 			match(IDENTIFIER);
-			setState(832);
+			setState(838);
 			match(LPAREN);
-			setState(834);
+			setState(840);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FLOAT) | (1L << INT) | (1L << NEW) | (1L << STRING) | (1L << VOID) | (1L << LPAREN) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 				{
-				setState(833);
+				setState(839);
 				expressionList();
 				}
 			}
 
-			setState(836);
+			setState(842);
 			match(RPAREN);
 			}
 		}
@@ -5471,6 +5855,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitExpression(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitExpression(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
@@ -5489,44 +5878,44 @@ public class NutParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(850);
+			setState(856);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,94,_ctx) ) {
 			case 1:
 				{
-				setState(839);
+				setState(845);
 				primary();
 				}
 				break;
 			case 2:
 				{
-				setState(840);
+				setState(846);
 				methodCall();
 				}
 				break;
 			case 3:
 				{
-				setState(841);
+				setState(847);
 				match(NEW);
-				setState(842);
+				setState(848);
 				creator();
 				}
 				break;
 			case 4:
 				{
-				setState(843);
+				setState(849);
 				match(LPAREN);
-				setState(844);
+				setState(850);
 				typeType();
-				setState(845);
+				setState(851);
 				match(RPAREN);
-				setState(846);
+				setState(852);
 				expression(11);
 				}
 				break;
 			case 5:
 				{
-				setState(848);
+				setState(854);
 				((ExpressionContext)_localctx).prefix = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB))) != 0)) ) {
@@ -5537,13 +5926,13 @@ public class NutParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(849);
+				setState(855);
 				expression(9);
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(900);
+			setState(906);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,98,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -5551,16 +5940,16 @@ public class NutParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(898);
+					setState(904);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,97,_ctx) ) {
 					case 1:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(852);
+						setState(858);
 						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
-						setState(853);
+						setState(859);
 						((ExpressionContext)_localctx).bop = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MUL) | (1L << DIV) | (1L << MOD))) != 0)) ) {
@@ -5571,7 +5960,7 @@ public class NutParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(854);
+						setState(860);
 						expression(9);
 						}
 						break;
@@ -5579,9 +5968,9 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(855);
+						setState(861);
 						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
-						setState(856);
+						setState(862);
 						((ExpressionContext)_localctx).bop = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==ADD || _la==SUB) ) {
@@ -5592,7 +5981,7 @@ public class NutParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(857);
+						setState(863);
 						expression(8);
 						}
 						break;
@@ -5600,39 +5989,39 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(858);
+						setState(864);
 						if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
-						setState(866);
+						setState(872);
 						_errHandler.sync(this);
 						switch ( getInterpreter().adaptivePredict(_input,95,_ctx) ) {
 						case 1:
 							{
-							setState(859);
+							setState(865);
 							match(LT);
-							setState(860);
+							setState(866);
 							match(LT);
 							}
 							break;
 						case 2:
 							{
-							setState(861);
+							setState(867);
 							match(GT);
-							setState(862);
+							setState(868);
 							match(GT);
-							setState(863);
+							setState(869);
 							match(GT);
 							}
 							break;
 						case 3:
 							{
-							setState(864);
+							setState(870);
 							match(GT);
-							setState(865);
+							setState(871);
 							match(GT);
 							}
 							break;
 						}
-						setState(868);
+						setState(874);
 						expression(7);
 						}
 						break;
@@ -5640,9 +6029,9 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(869);
+						setState(875);
 						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
-						setState(870);
+						setState(876);
 						((ExpressionContext)_localctx).bop = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GT) | (1L << LT) | (1L << LE) | (1L << GE))) != 0)) ) {
@@ -5653,7 +6042,7 @@ public class NutParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(871);
+						setState(877);
 						expression(6);
 						}
 						break;
@@ -5661,9 +6050,9 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(872);
+						setState(878);
 						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-						setState(873);
+						setState(879);
 						((ExpressionContext)_localctx).bop = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==EQUAL || _la==NOTEQUAL) ) {
@@ -5674,7 +6063,7 @@ public class NutParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(874);
+						setState(880);
 						expression(5);
 						}
 						break;
@@ -5682,11 +6071,11 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(875);
+						setState(881);
 						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-						setState(876);
+						setState(882);
 						((ExpressionContext)_localctx).bop = match(AND);
-						setState(877);
+						setState(883);
 						expression(4);
 						}
 						break;
@@ -5694,11 +6083,11 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(878);
+						setState(884);
 						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
-						setState(879);
+						setState(885);
 						((ExpressionContext)_localctx).bop = match(OR);
-						setState(880);
+						setState(886);
 						expression(3);
 						}
 						break;
@@ -5706,9 +6095,9 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(881);
+						setState(887);
 						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
-						setState(882);
+						setState(888);
 						((ExpressionContext)_localctx).bop = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(((((_la - 39)) & ~0x3f) == 0 && ((1L << (_la - 39)) & ((1L << (ASSIGN - 39)) | (1L << (ADD_ASSIGN - 39)) | (1L << (SUB_ASSIGN - 39)) | (1L << (MUL_ASSIGN - 39)) | (1L << (DIV_ASSIGN - 39)))) != 0)) ) {
@@ -5719,7 +6108,7 @@ public class NutParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(883);
+						setState(889);
 						expression(1);
 						}
 						break;
@@ -5727,28 +6116,28 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(884);
+						setState(890);
 						if (!(precpred(_ctx, 15))) throw new FailedPredicateException(this, "precpred(_ctx, 15)");
-						setState(885);
+						setState(891);
 						((ExpressionContext)_localctx).bop = match(DOT);
-						setState(889);
+						setState(895);
 						_errHandler.sync(this);
 						switch ( getInterpreter().adaptivePredict(_input,96,_ctx) ) {
 						case 1:
 							{
-							setState(886);
+							setState(892);
 							match(IDENTIFIER);
 							}
 							break;
 						case 2:
 							{
-							setState(887);
+							setState(893);
 							methodCall();
 							}
 							break;
 						case 3:
 							{
-							setState(888);
+							setState(894);
 							explicitGenericInvocation();
 							}
 							break;
@@ -5759,13 +6148,13 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(891);
+						setState(897);
 						if (!(precpred(_ctx, 14))) throw new FailedPredicateException(this, "precpred(_ctx, 14)");
-						setState(892);
+						setState(898);
 						match(LBRACK);
-						setState(893);
+						setState(899);
 						expression(0);
-						setState(894);
+						setState(900);
 						match(RBRACK);
 						}
 						break;
@@ -5773,9 +6162,9 @@ public class NutParser extends Parser {
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(896);
+						setState(902);
 						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
-						setState(897);
+						setState(903);
 						((ExpressionContext)_localctx).postfix = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==INC || _la==DEC) ) {
@@ -5791,7 +6180,7 @@ public class NutParser extends Parser {
 					}
 					} 
 				}
-				setState(902);
+				setState(908);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,98,_ctx);
 			}
@@ -5841,58 +6230,63 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitPrimary(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitPrimary(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final PrimaryContext primary() throws RecognitionException {
 		PrimaryContext _localctx = new PrimaryContext(_ctx, getState());
 		enterRule(_localctx, 148, RULE_primary);
 		try {
-			setState(916);
+			setState(922);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,99,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(903);
+				setState(909);
 				match(LPAREN);
-				setState(904);
+				setState(910);
 				expression(0);
-				setState(905);
+				setState(911);
 				match(RPAREN);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(907);
+				setState(913);
 				literal();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(908);
+				setState(914);
 				match(IDENTIFIER);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(909);
+				setState(915);
 				typeTypeOrVoid();
-				setState(910);
+				setState(916);
 				match(DOT);
-				setState(911);
+				setState(917);
 				match(CLASS);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(913);
+				setState(919);
 				nonWildcardTypeArguments();
 				{
-				setState(914);
+				setState(920);
 				explicitGenericInvocationSuffix();
 				}
 				}
@@ -5937,6 +6331,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassType(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassType(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ClassTypeContext classType() throws RecognitionException {
@@ -5946,40 +6345,40 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(921);
+			setState(927);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,100,_ctx) ) {
 			case 1:
 				{
-				setState(918);
+				setState(924);
 				classOrInterfaceType();
-				setState(919);
+				setState(925);
 				match(DOT);
 				}
 				break;
 			}
-			setState(926);
+			setState(932);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==AT) {
 				{
 				{
-				setState(923);
+				setState(929);
 				annotation();
 				}
 				}
-				setState(928);
+				setState(934);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(929);
+			setState(935);
 			match(IDENTIFIER);
-			setState(931);
+			setState(937);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LT) {
 				{
-				setState(930);
+				setState(936);
 				typeArguments();
 				}
 			}
@@ -6019,23 +6418,28 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitCreator(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitCreator(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CreatorContext creator() throws RecognitionException {
 		CreatorContext _localctx = new CreatorContext(_ctx, getState());
 		enterRule(_localctx, 152, RULE_creator);
 		try {
-			setState(940);
+			setState(946);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(933);
+				setState(939);
 				nonWildcardTypeArguments();
-				setState(934);
+				setState(940);
 				createdName();
-				setState(935);
+				setState(941);
 				classCreatorRest();
 				}
 				break;
@@ -6048,10 +6452,10 @@ public class NutParser extends Parser {
 			case IDENTIFIER:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(937);
+				setState(943);
 				createdName();
 				{
-				setState(938);
+				setState(944);
 				classCreatorRest();
 				}
 				}
@@ -6101,6 +6505,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitCreatedName(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitCreatedName(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CreatedNameContext createdName() throws RecognitionException {
@@ -6108,47 +6517,47 @@ public class NutParser extends Parser {
 		enterRule(_localctx, 154, RULE_createdName);
 		int _la;
 		try {
-			setState(957);
+			setState(963);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENTIFIER:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(942);
+				setState(948);
 				match(IDENTIFIER);
-				setState(944);
+				setState(950);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==LT) {
 					{
-					setState(943);
+					setState(949);
 					typeArgumentsOrDiamond();
 					}
 				}
 
-				setState(953);
+				setState(959);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==DOT) {
 					{
 					{
-					setState(946);
+					setState(952);
 					match(DOT);
-					setState(947);
+					setState(953);
 					match(IDENTIFIER);
-					setState(949);
+					setState(955);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					if (_la==LT) {
 						{
-						setState(948);
+						setState(954);
 						typeArgumentsOrDiamond();
 						}
 					}
 
 					}
 					}
-					setState(955);
+					setState(961);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -6162,7 +6571,7 @@ public class NutParser extends Parser {
 			case STRING:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(956);
+				setState(962);
 				primitiveType();
 				}
 				break;
@@ -6201,6 +6610,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitInnerCreator(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitInnerCreator(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InnerCreatorContext innerCreator() throws RecognitionException {
@@ -6210,19 +6624,19 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(959);
+			setState(965);
 			match(IDENTIFIER);
-			setState(961);
+			setState(967);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LT) {
 				{
-				setState(960);
+				setState(966);
 				nonWildcardTypeArgumentsOrDiamond();
 				}
 			}
 
-			setState(963);
+			setState(969);
 			classCreatorRest();
 			}
 		}
@@ -6256,6 +6670,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitClassCreatorRest(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitClassCreatorRest(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ClassCreatorRestContext classCreatorRest() throws RecognitionException {
@@ -6264,14 +6683,14 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(965);
+			setState(971);
 			arguments();
-			setState(967);
+			setState(973);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,109,_ctx) ) {
 			case 1:
 				{
-				setState(966);
+				setState(972);
 				classBody();
 				}
 				break;
@@ -6308,6 +6727,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitExplicitGenericInvocation(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitExplicitGenericInvocation(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ExplicitGenericInvocationContext explicitGenericInvocation() throws RecognitionException {
@@ -6316,9 +6740,9 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(969);
+			setState(975);
 			nonWildcardTypeArguments();
-			setState(970);
+			setState(976);
 			explicitGenericInvocationSuffix();
 			}
 		}
@@ -6351,28 +6775,33 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeArgumentsOrDiamond(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeArgumentsOrDiamond(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeArgumentsOrDiamondContext typeArgumentsOrDiamond() throws RecognitionException {
 		TypeArgumentsOrDiamondContext _localctx = new TypeArgumentsOrDiamondContext(_ctx, getState());
 		enterRule(_localctx, 162, RULE_typeArgumentsOrDiamond);
 		try {
-			setState(975);
+			setState(981);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,110,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(972);
+				setState(978);
 				match(LT);
-				setState(973);
+				setState(979);
 				match(GT);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(974);
+				setState(980);
 				typeArguments();
 				}
 				break;
@@ -6407,28 +6836,33 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitNonWildcardTypeArgumentsOrDiamond(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitNonWildcardTypeArgumentsOrDiamond(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final NonWildcardTypeArgumentsOrDiamondContext nonWildcardTypeArgumentsOrDiamond() throws RecognitionException {
 		NonWildcardTypeArgumentsOrDiamondContext _localctx = new NonWildcardTypeArgumentsOrDiamondContext(_ctx, getState());
 		enterRule(_localctx, 164, RULE_nonWildcardTypeArgumentsOrDiamond);
 		try {
-			setState(980);
+			setState(986);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,111,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(977);
+				setState(983);
 				match(LT);
-				setState(978);
+				setState(984);
 				match(GT);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(979);
+				setState(985);
 				nonWildcardTypeArguments();
 				}
 				break;
@@ -6463,6 +6897,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitNonWildcardTypeArguments(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitNonWildcardTypeArguments(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final NonWildcardTypeArgumentsContext nonWildcardTypeArguments() throws RecognitionException {
@@ -6471,11 +6910,11 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(982);
+			setState(988);
 			match(LT);
-			setState(983);
+			setState(989);
 			typeList();
-			setState(984);
+			setState(990);
 			match(GT);
 			}
 		}
@@ -6513,6 +6952,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeList(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeList(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeListContext typeList() throws RecognitionException {
@@ -6522,21 +6966,21 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(986);
+			setState(992);
 			typeType();
-			setState(991);
+			setState(997);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(987);
+				setState(993);
 				match(COMMA);
-				setState(988);
+				setState(994);
 				typeType();
 				}
 				}
-				setState(993);
+				setState(999);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -6583,6 +7027,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeType(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeType(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeTypeContext typeType() throws RecognitionException {
@@ -6592,22 +7041,22 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(995);
+			setState(1001);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==AT) {
 				{
-				setState(994);
+				setState(1000);
 				annotation();
 				}
 			}
 
-			setState(999);
+			setState(1005);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENTIFIER:
 				{
-				setState(997);
+				setState(1003);
 				classOrInterfaceType();
 				}
 				break;
@@ -6618,26 +7067,26 @@ public class NutParser extends Parser {
 			case INT:
 			case STRING:
 				{
-				setState(998);
+				setState(1004);
 				primitiveType();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(1005);
+			setState(1011);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==LBRACK) {
 				{
 				{
-				setState(1001);
+				setState(1007);
 				match(LBRACK);
-				setState(1002);
+				setState(1008);
 				match(RBRACK);
 				}
 				}
-				setState(1007);
+				setState(1013);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -6673,6 +7122,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitPrimitiveType(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitPrimitiveType(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final PrimitiveTypeContext primitiveType() throws RecognitionException {
@@ -6682,7 +7136,7 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1008);
+			setState(1014);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FLOAT) | (1L << INT) | (1L << STRING))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -6730,6 +7184,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitTypeArguments(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitTypeArguments(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TypeArgumentsContext typeArguments() throws RecognitionException {
@@ -6739,27 +7198,27 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1010);
-			match(LT);
-			setState(1011);
-			typeArgument();
 			setState(1016);
+			match(LT);
+			setState(1017);
+			typeArgument();
+			setState(1022);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(1012);
+				setState(1018);
 				match(COMMA);
-				setState(1013);
+				setState(1019);
 				typeArgument();
 				}
 				}
-				setState(1018);
+				setState(1024);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1019);
+			setState(1025);
 			match(GT);
 			}
 		}
@@ -6792,6 +7251,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitSuperSuffix(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitSuperSuffix(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SuperSuffixContext superSuffix() throws RecognitionException {
@@ -6799,29 +7263,29 @@ public class NutParser extends Parser {
 		enterRule(_localctx, 176, RULE_superSuffix);
 		int _la;
 		try {
-			setState(1027);
+			setState(1033);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LPAREN:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(1021);
+				setState(1027);
 				arguments();
 				}
 				break;
 			case DOT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(1022);
+				setState(1028);
 				match(DOT);
-				setState(1023);
+				setState(1029);
 				match(IDENTIFIER);
-				setState(1025);
+				setState(1031);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==LPAREN) {
 					{
-					setState(1024);
+					setState(1030);
 					arguments();
 					}
 				}
@@ -6860,6 +7324,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitExplicitGenericInvocationSuffix(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitExplicitGenericInvocationSuffix(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ExplicitGenericInvocationSuffixContext explicitGenericInvocationSuffix() throws RecognitionException {
@@ -6868,9 +7337,9 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1029);
+			setState(1035);
 			match(IDENTIFIER);
-			setState(1030);
+			setState(1036);
 			arguments();
 			}
 		}
@@ -6903,6 +7372,11 @@ public class NutParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof NutParserListener ) ((NutParserListener)listener).exitArguments(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof NutParserVisitor ) return ((NutParserVisitor<? extends T>)visitor).visitArguments(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ArgumentsContext arguments() throws RecognitionException {
@@ -6912,19 +7386,19 @@ public class NutParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1032);
+			setState(1038);
 			match(LPAREN);
-			setState(1034);
+			setState(1040);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << BOOLEAN) | (1L << CHAR) | (1L << DOUBLE) | (1L << FLOAT) | (1L << INT) | (1L << NEW) | (1L << STRING) | (1L << VOID) | (1L << LPAREN) | (1L << LT) | (1L << INC) | (1L << DEC) | (1L << ADD) | (1L << SUB) | (1L << AT))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (IDENTIFIER - 66)) | (1L << (DECIMAL_LITERAL - 66)) | (1L << (HEX_LITERAL - 66)) | (1L << (OCT_LITERAL - 66)) | (1L << (BINARY_LITERAL - 66)) | (1L << (FLOAT_LITERAL - 66)) | (1L << (HEX_FLOAT_LITERAL - 66)) | (1L << (BOOL_LITERAL - 66)) | (1L << (CHAR_LITERAL - 66)) | (1L << (STRING_LITERAL - 66)))) != 0)) {
 				{
-				setState(1033);
+				setState(1039);
 				expressionList();
 				}
 			}
 
-			setState(1036);
+			setState(1042);
 			match(RPAREN);
 			}
 		}
@@ -6975,7 +7449,7 @@ public class NutParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3O\u0411\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3O\u0417\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -7028,64 +7502,64 @@ public class NutParser extends Parser {
 		"\u02ac\n?\3?\3?\3?\3?\3?\3?\3?\5?\u02b5\n?\3?\3?\3?\3?\3?\3?\3?\3?\3?"+
 		"\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\7?\u02cb\n?\f?\16?\u02ce\13?\3?\7?\u02d1"+
 		"\n?\f?\16?\u02d4\13?\3?\3?\3?\3?\5?\u02da\n?\3?\3?\3?\5?\u02df\n?\3?\3"+
-		"?\3?\3?\3?\3?\3?\3?\5?\u02e9\n?\3@\3@\3@\5@\u02ee\n@\3@\3@\3A\3A\3A\7"+
-		"A\u02f5\nA\fA\16A\u02f8\13A\3B\7B\u02fb\nB\fB\16B\u02fe\13B\3B\3B\3B\3"+
-		"B\3B\3C\6C\u0306\nC\rC\16C\u0307\3C\6C\u030b\nC\rC\16C\u030c\3D\3D\3D"+
-		"\5D\u0312\nD\3D\3D\3D\5D\u0317\nD\3E\3E\5E\u031b\nE\3E\3E\5E\u031f\nE"+
-		"\3E\3E\5E\u0323\nE\5E\u0325\nE\3F\3F\5F\u0329\nF\3G\7G\u032c\nG\fG\16"+
-		"G\u032f\13G\3G\3G\3G\3G\3G\3H\3H\3H\3H\3I\3I\3I\7I\u033d\nI\fI\16I\u0340"+
-		"\13I\3J\3J\3J\5J\u0345\nJ\3J\3J\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\5"+
-		"K\u0355\nK\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\5K\u0365\nK\3K\3"+
-		"K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\5K\u037c\n"+
-		"K\3K\3K\3K\3K\3K\3K\3K\7K\u0385\nK\fK\16K\u0388\13K\3L\3L\3L\3L\3L\3L"+
-		"\3L\3L\3L\3L\3L\3L\3L\5L\u0397\nL\3M\3M\3M\5M\u039c\nM\3M\7M\u039f\nM"+
-		"\fM\16M\u03a2\13M\3M\3M\5M\u03a6\nM\3N\3N\3N\3N\3N\3N\3N\5N\u03af\nN\3"+
-		"O\3O\5O\u03b3\nO\3O\3O\3O\5O\u03b8\nO\7O\u03ba\nO\fO\16O\u03bd\13O\3O"+
-		"\5O\u03c0\nO\3P\3P\5P\u03c4\nP\3P\3P\3Q\3Q\5Q\u03ca\nQ\3R\3R\3R\3S\3S"+
-		"\3S\5S\u03d2\nS\3T\3T\3T\5T\u03d7\nT\3U\3U\3U\3U\3V\3V\3V\7V\u03e0\nV"+
-		"\fV\16V\u03e3\13V\3W\5W\u03e6\nW\3W\3W\5W\u03ea\nW\3W\3W\7W\u03ee\nW\f"+
-		"W\16W\u03f1\13W\3X\3X\3Y\3Y\3Y\3Y\7Y\u03f9\nY\fY\16Y\u03fc\13Y\3Y\3Y\3"+
-		"Z\3Z\3Z\3Z\5Z\u0404\nZ\5Z\u0406\nZ\3[\3[\3[\3\\\3\\\5\\\u040d\n\\\3\\"+
-		"\3\\\3\\\2\3\u0094]\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60"+
-		"\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084\u0086"+
-		"\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a\u009c\u009e"+
-		"\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4\u00b6"+
-		"\2\f\3\2EH\3\2IJ\3\2\64\67\3\28:\3\2\66\67\4\2*+/\60\4\2..\61\61\4\2)"+
-		")?B\3\2\64\65\b\2\4\4\7\7\f\f\17\17\22\22\33\33\2\u0461\2\u00bb\3\2\2"+
-		"\2\4\u00cc\3\2\2\2\6\u00ce\3\2\2\2\b\u00d5\3\2\2\2\n\u00d9\3\2\2\2\f\u00db"+
-		"\3\2\2\2\16\u00e2\3\2\2\2\20\u00f0\3\2\2\2\22\u00f5\3\2\2\2\24\u00fd\3"+
-		"\2\2\2\26\u0104\3\2\2\2\30\u010d\3\2\2\2\32\u0122\3\2\2\2\34\u012c\3\2"+
-		"\2\2\36\u012e\3\2\2\2 \u013c\3\2\2\2\"\u0140\3\2\2\2$\u0142\3\2\2\2&\u0145"+
-		"\3\2\2\2(\u0148\3\2\2\2*\u014c\3\2\2\2,\u0158\3\2\2\2.\u0160\3\2\2\2\60"+
-		"\u0162\3\2\2\2\62\u016d\3\2\2\2\64\u017b\3\2\2\2\66\u0199\3\2\2\28\u019b"+
-		"\3\2\2\2:\u019e\3\2\2\2<\u01a6\3\2\2\2>\u01ab\3\2\2\2@\u01b5\3\2\2\2B"+
-		"\u01b7\3\2\2\2D\u01c7\3\2\2\2F\u01d7\3\2\2\2H\u01d9\3\2\2\2J\u01e1\3\2"+
-		"\2\2L\u01f4\3\2\2\2N\u01f9\3\2\2\2P\u0202\3\2\2\2R\u0209\3\2\2\2T\u0216"+
-		"\3\2\2\2V\u0218\3\2\2\2X\u021a\3\2\2\2Z\u021c\3\2\2\2\\\u0226\3\2\2\2"+
-		"^\u022e\3\2\2\2`\u0235\3\2\2\2b\u0237\3\2\2\2d\u0247\3\2\2\2f\u024c\3"+
-		"\2\2\2h\u025d\3\2\2\2j\u026f\3\2\2\2l\u0273\3\2\2\2n\u0275\3\2\2\2p\u027b"+
-		"\3\2\2\2r\u027d\3\2\2\2t\u0280\3\2\2\2v\u028e\3\2\2\2x\u0293\3\2\2\2z"+
-		"\u02a4\3\2\2\2|\u02e8\3\2\2\2~\u02ea\3\2\2\2\u0080\u02f1\3\2\2\2\u0082"+
-		"\u02fc\3\2\2\2\u0084\u0305\3\2\2\2\u0086\u0316\3\2\2\2\u0088\u0324\3\2"+
-		"\2\2\u008a\u0328\3\2\2\2\u008c\u032d\3\2\2\2\u008e\u0335\3\2\2\2\u0090"+
-		"\u0339\3\2\2\2\u0092\u0341\3\2\2\2\u0094\u0354\3\2\2\2\u0096\u0396\3\2"+
-		"\2\2\u0098\u039b\3\2\2\2\u009a\u03ae\3\2\2\2\u009c\u03bf\3\2\2\2\u009e"+
-		"\u03c1\3\2\2\2\u00a0\u03c7\3\2\2\2\u00a2\u03cb\3\2\2\2\u00a4\u03d1\3\2"+
-		"\2\2\u00a6\u03d6\3\2\2\2\u00a8\u03d8\3\2\2\2\u00aa\u03dc\3\2\2\2\u00ac"+
-		"\u03e5\3\2\2\2\u00ae\u03f2\3\2\2\2\u00b0\u03f4\3\2\2\2\u00b2\u0405\3\2"+
-		"\2\2\u00b4\u0407\3\2\2\2\u00b6\u040a\3\2\2\2\u00b8\u00ba\5\4\3\2\u00b9"+
-		"\u00b8\3\2\2\2\u00ba\u00bd\3\2\2\2\u00bb\u00b9\3\2\2\2\u00bb\u00bc\3\2"+
-		"\2\2\u00bc\u00be\3\2\2\2\u00bd\u00bb\3\2\2\2\u00be\u00bf\7\2\2\3\u00bf"+
-		"\3\3\2\2\2\u00c0\u00c2\5\b\5\2\u00c1\u00c0\3\2\2\2\u00c2\u00c5\3\2\2\2"+
-		"\u00c3\u00c1\3\2\2\2\u00c3\u00c4\3\2\2\2\u00c4\u00c9\3\2\2\2\u00c5\u00c3"+
-		"\3\2\2\2\u00c6\u00ca\5\f\7\2\u00c7\u00ca\5\24\13\2\u00c8\u00ca\5d\63\2"+
-		"\u00c9\u00c6\3\2\2\2\u00c9\u00c7\3\2\2\2\u00c9\u00c8\3\2\2\2\u00ca\u00cd"+
-		"\3\2\2\2\u00cb\u00cd\7%\2\2\u00cc\u00c3\3\2\2\2\u00cc\u00cb\3\2\2\2\u00cd"+
-		"\5\3\2\2\2\u00ce\u00cf\5\b\5\2\u00cf\7\3\2\2\2\u00d0\u00d6\5Z.\2\u00d1"+
-		"\u00d6\7\27\2\2\u00d2\u00d6\7\26\2\2\u00d3\u00d6\7\32\2\2\u00d4\u00d6"+
-		"\7\16\2\2\u00d5\u00d0\3\2\2\2\u00d5\u00d1\3\2\2\2\u00d5\u00d2\3\2\2\2"+
-		"\u00d5\u00d3\3\2\2\2\u00d5\u00d4\3\2\2\2\u00d6\t\3\2\2\2\u00d7\u00da\7"+
-		"\16\2\2\u00d8\u00da\5Z.\2\u00d9\u00d7\3\2\2\2\u00d9\u00d8\3\2\2\2\u00da"+
+		"?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\3?\5?\u02ef\n?\3@\3@\3@\5@\u02f4\n"+
+		"@\3@\3@\3A\3A\3A\7A\u02fb\nA\fA\16A\u02fe\13A\3B\7B\u0301\nB\fB\16B\u0304"+
+		"\13B\3B\3B\3B\3B\3B\3C\6C\u030c\nC\rC\16C\u030d\3C\6C\u0311\nC\rC\16C"+
+		"\u0312\3D\3D\3D\5D\u0318\nD\3D\3D\3D\5D\u031d\nD\3E\3E\5E\u0321\nE\3E"+
+		"\3E\5E\u0325\nE\3E\3E\5E\u0329\nE\5E\u032b\nE\3F\3F\5F\u032f\nF\3G\7G"+
+		"\u0332\nG\fG\16G\u0335\13G\3G\3G\3G\3G\3G\3H\3H\3H\3H\3I\3I\3I\7I\u0343"+
+		"\nI\fI\16I\u0346\13I\3J\3J\3J\5J\u034b\nJ\3J\3J\3K\3K\3K\3K\3K\3K\3K\3"+
+		"K\3K\3K\3K\3K\5K\u035b\nK\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\5"+
+		"K\u036b\nK\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3K\3"+
+		"K\3K\5K\u0382\nK\3K\3K\3K\3K\3K\3K\3K\7K\u038b\nK\fK\16K\u038e\13K\3L"+
+		"\3L\3L\3L\3L\3L\3L\3L\3L\3L\3L\3L\3L\5L\u039d\nL\3M\3M\3M\5M\u03a2\nM"+
+		"\3M\7M\u03a5\nM\fM\16M\u03a8\13M\3M\3M\5M\u03ac\nM\3N\3N\3N\3N\3N\3N\3"+
+		"N\5N\u03b5\nN\3O\3O\5O\u03b9\nO\3O\3O\3O\5O\u03be\nO\7O\u03c0\nO\fO\16"+
+		"O\u03c3\13O\3O\5O\u03c6\nO\3P\3P\5P\u03ca\nP\3P\3P\3Q\3Q\5Q\u03d0\nQ\3"+
+		"R\3R\3R\3S\3S\3S\5S\u03d8\nS\3T\3T\3T\5T\u03dd\nT\3U\3U\3U\3U\3V\3V\3"+
+		"V\7V\u03e6\nV\fV\16V\u03e9\13V\3W\5W\u03ec\nW\3W\3W\5W\u03f0\nW\3W\3W"+
+		"\7W\u03f4\nW\fW\16W\u03f7\13W\3X\3X\3Y\3Y\3Y\3Y\7Y\u03ff\nY\fY\16Y\u0402"+
+		"\13Y\3Y\3Y\3Z\3Z\3Z\3Z\5Z\u040a\nZ\5Z\u040c\nZ\3[\3[\3[\3\\\3\\\5\\\u0413"+
+		"\n\\\3\\\3\\\3\\\2\3\u0094]\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \""+
+		"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084"+
+		"\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a\u009c"+
+		"\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4"+
+		"\u00b6\2\f\3\2EH\3\2IJ\3\2\64\67\3\28:\3\2\66\67\4\2*+/\60\4\2..\61\61"+
+		"\4\2))?B\3\2\64\65\b\2\4\4\7\7\f\f\17\17\22\22\33\33\2\u0468\2\u00bb\3"+
+		"\2\2\2\4\u00cc\3\2\2\2\6\u00ce\3\2\2\2\b\u00d5\3\2\2\2\n\u00d9\3\2\2\2"+
+		"\f\u00db\3\2\2\2\16\u00e2\3\2\2\2\20\u00f0\3\2\2\2\22\u00f5\3\2\2\2\24"+
+		"\u00fd\3\2\2\2\26\u0104\3\2\2\2\30\u010d\3\2\2\2\32\u0122\3\2\2\2\34\u012c"+
+		"\3\2\2\2\36\u012e\3\2\2\2 \u013c\3\2\2\2\"\u0140\3\2\2\2$\u0142\3\2\2"+
+		"\2&\u0145\3\2\2\2(\u0148\3\2\2\2*\u014c\3\2\2\2,\u0158\3\2\2\2.\u0160"+
+		"\3\2\2\2\60\u0162\3\2\2\2\62\u016d\3\2\2\2\64\u017b\3\2\2\2\66\u0199\3"+
+		"\2\2\28\u019b\3\2\2\2:\u019e\3\2\2\2<\u01a6\3\2\2\2>\u01ab\3\2\2\2@\u01b5"+
+		"\3\2\2\2B\u01b7\3\2\2\2D\u01c7\3\2\2\2F\u01d7\3\2\2\2H\u01d9\3\2\2\2J"+
+		"\u01e1\3\2\2\2L\u01f4\3\2\2\2N\u01f9\3\2\2\2P\u0202\3\2\2\2R\u0209\3\2"+
+		"\2\2T\u0216\3\2\2\2V\u0218\3\2\2\2X\u021a\3\2\2\2Z\u021c\3\2\2\2\\\u0226"+
+		"\3\2\2\2^\u022e\3\2\2\2`\u0235\3\2\2\2b\u0237\3\2\2\2d\u0247\3\2\2\2f"+
+		"\u024c\3\2\2\2h\u025d\3\2\2\2j\u026f\3\2\2\2l\u0273\3\2\2\2n\u0275\3\2"+
+		"\2\2p\u027b\3\2\2\2r\u027d\3\2\2\2t\u0280\3\2\2\2v\u028e\3\2\2\2x\u0293"+
+		"\3\2\2\2z\u02a4\3\2\2\2|\u02ee\3\2\2\2~\u02f0\3\2\2\2\u0080\u02f7\3\2"+
+		"\2\2\u0082\u0302\3\2\2\2\u0084\u030b\3\2\2\2\u0086\u031c\3\2\2\2\u0088"+
+		"\u032a\3\2\2\2\u008a\u032e\3\2\2\2\u008c\u0333\3\2\2\2\u008e\u033b\3\2"+
+		"\2\2\u0090\u033f\3\2\2\2\u0092\u0347\3\2\2\2\u0094\u035a\3\2\2\2\u0096"+
+		"\u039c\3\2\2\2\u0098\u03a1\3\2\2\2\u009a\u03b4\3\2\2\2\u009c\u03c5\3\2"+
+		"\2\2\u009e\u03c7\3\2\2\2\u00a0\u03cd\3\2\2\2\u00a2\u03d1\3\2\2\2\u00a4"+
+		"\u03d7\3\2\2\2\u00a6\u03dc\3\2\2\2\u00a8\u03de\3\2\2\2\u00aa\u03e2\3\2"+
+		"\2\2\u00ac\u03eb\3\2\2\2\u00ae\u03f8\3\2\2\2\u00b0\u03fa\3\2\2\2\u00b2"+
+		"\u040b\3\2\2\2\u00b4\u040d\3\2\2\2\u00b6\u0410\3\2\2\2\u00b8\u00ba\5\4"+
+		"\3\2\u00b9\u00b8\3\2\2\2\u00ba\u00bd\3\2\2\2\u00bb\u00b9\3\2\2\2\u00bb"+
+		"\u00bc\3\2\2\2\u00bc\u00be\3\2\2\2\u00bd\u00bb\3\2\2\2\u00be\u00bf\7\2"+
+		"\2\3\u00bf\3\3\2\2\2\u00c0\u00c2\5\b\5\2\u00c1\u00c0\3\2\2\2\u00c2\u00c5"+
+		"\3\2\2\2\u00c3\u00c1\3\2\2\2\u00c3\u00c4\3\2\2\2\u00c4\u00c9\3\2\2\2\u00c5"+
+		"\u00c3\3\2\2\2\u00c6\u00ca\5\f\7\2\u00c7\u00ca\5\24\13\2\u00c8\u00ca\5"+
+		"d\63\2\u00c9\u00c6\3\2\2\2\u00c9\u00c7\3\2\2\2\u00c9\u00c8\3\2\2\2\u00ca"+
+		"\u00cd\3\2\2\2\u00cb\u00cd\7%\2\2\u00cc\u00c3\3\2\2\2\u00cc\u00cb\3\2"+
+		"\2\2\u00cd\5\3\2\2\2\u00ce\u00cf\5\b\5\2\u00cf\7\3\2\2\2\u00d0\u00d6\5"+
+		"Z.\2\u00d1\u00d6\7\27\2\2\u00d2\u00d6\7\26\2\2\u00d3\u00d6\7\32\2\2\u00d4"+
+		"\u00d6\7\16\2\2\u00d5\u00d0\3\2\2\2\u00d5\u00d1\3\2\2\2\u00d5\u00d2\3"+
+		"\2\2\2\u00d5\u00d3\3\2\2\2\u00d5\u00d4\3\2\2\2\u00d6\t\3\2\2\2\u00d7\u00da"+
+		"\7\16\2\2\u00d8\u00da\5Z.\2\u00d9\u00d7\3\2\2\2\u00d9\u00d8\3\2\2\2\u00da"+
 		"\13\3\2\2\2\u00db\u00dc\7\b\2\2\u00dc\u00de\7D\2\2\u00dd\u00df\5\16\b"+
 		"\2\u00de\u00dd\3\2\2\2\u00de\u00df\3\2\2\2\u00df\u00e0\3\2\2\2\u00e0\u00e1"+
 		"\5\26\f\2\u00e1\r\3\2\2\2\u00e2\u00e3\7+\2\2\u00e3\u00e8\5\20\t\2\u00e4"+
@@ -7236,142 +7710,144 @@ public class NutParser extends Parser {
 		"\u02a1\3\2\2\2\u029e\u029c\3\2\2\2\u029f\u02a2\5\f\7\2\u02a0\u02a2\5\24"+
 		"\13\2\u02a1\u029f\3\2\2\2\u02a1\u02a0\3\2\2\2\u02a2\u02a5\3\2\2\2\u02a3"+
 		"\u02a5\7%\2\2\u02a4\u029c\3\2\2\2\u02a4\u02a3\3\2\2\2\u02a5{\3\2\2\2\u02a6"+
-		"\u02e9\5t;\2\u02a7\u02a8\7\3\2\2\u02a8\u02ab\5\u0094K\2\u02a9\u02aa\7"+
+		"\u02ef\5t;\2\u02a7\u02a8\7\3\2\2\u02a8\u02ab\5\u0094K\2\u02a9\u02aa\7"+
 		"-\2\2\u02aa\u02ac\5\u0094K\2\u02ab\u02a9\3\2\2\2\u02ab\u02ac\3\2\2\2\u02ac"+
-		"\u02ad\3\2\2\2\u02ad\u02ae\7%\2\2\u02ae\u02e9\3\2\2\2\u02af\u02b0\7\21"+
+		"\u02ad\3\2\2\2\u02ad\u02ae\7%\2\2\u02ae\u02ef\3\2\2\2\u02af\u02b0\7\21"+
 		"\2\2\u02b0\u02b1\5\u008eH\2\u02b1\u02b4\5|?\2\u02b2\u02b3\7\r\2\2\u02b3"+
-		"\u02b5\5|?\2\u02b4\u02b2\3\2\2\2\u02b4\u02b5\3\2\2\2\u02b5\u02e9\3\2\2"+
+		"\u02b5\5|?\2\u02b4\u02b2\3\2\2\2\u02b4\u02b5\3\2\2\2\u02b5\u02ef\3\2\2"+
 		"\2\u02b6\u02b7\7\20\2\2\u02b7\u02b8\7\37\2\2\u02b8\u02b9\5\u0088E\2\u02b9"+
-		"\u02ba\7 \2\2\u02ba\u02bb\5|?\2\u02bb\u02e9\3\2\2\2\u02bc\u02bd\7\36\2"+
-		"\2\u02bd\u02be\5\u008eH\2\u02be\u02bf\5|?\2\u02bf\u02e9\3\2\2\2\u02c0"+
+		"\u02ba\7 \2\2\u02ba\u02bb\5|?\2\u02bb\u02ef\3\2\2\2\u02bc\u02bd\7\36\2"+
+		"\2\u02bd\u02be\5\u008eH\2\u02be\u02bf\5|?\2\u02bf\u02ef\3\2\2\2\u02c0"+
 		"\u02c1\7\13\2\2\u02c1\u02c2\5|?\2\u02c2\u02c3\7\36\2\2\u02c3\u02c4\5\u008e"+
-		"H\2\u02c4\u02c5\7%\2\2\u02c5\u02e9\3\2\2\2\u02c6\u02c7\7\34\2\2\u02c7"+
+		"H\2\u02c4\u02c5\7%\2\2\u02c5\u02ef\3\2\2\2\u02c6\u02c7\7\34\2\2\u02c7"+
 		"\u02c8\5\u008eH\2\u02c8\u02cc\7!\2\2\u02c9\u02cb\5\u0084C\2\u02ca\u02c9"+
 		"\3\2\2\2\u02cb\u02ce\3\2\2\2\u02cc\u02ca\3\2\2\2\u02cc\u02cd\3\2\2\2\u02cd"+
 		"\u02d2\3\2\2\2\u02ce\u02cc\3\2\2\2\u02cf\u02d1\5\u0086D\2\u02d0\u02cf"+
 		"\3\2\2\2\u02d1\u02d4\3\2\2\2\u02d2\u02d0\3\2\2\2\u02d2\u02d3\3\2\2\2\u02d3"+
-		"\u02d5\3\2\2\2\u02d4\u02d2\3\2\2\2\u02d5\u02d6\7\"\2\2\u02d6\u02e9\3\2"+
+		"\u02d5\3\2\2\2\u02d4\u02d2\3\2\2\2\u02d5\u02d6\7\"\2\2\u02d6\u02ef\3\2"+
 		"\2\2\u02d7\u02d9\7\30\2\2\u02d8\u02da\5\u0094K\2\u02d9\u02d8\3\2\2\2\u02d9"+
-		"\u02da\3\2\2\2\u02da\u02db\3\2\2\2\u02db\u02e9\7%\2\2\u02dc\u02de\7\5"+
+		"\u02da\3\2\2\2\u02da\u02db\3\2\2\2\u02db\u02ef\7%\2\2\u02dc\u02de\7\5"+
 		"\2\2\u02dd\u02df\7D\2\2\u02de\u02dd\3\2\2\2\u02de\u02df\3\2\2\2\u02df"+
-		"\u02e0\3\2\2\2\u02e0\u02e9\7%\2\2\u02e1\u02e9\7%\2\2\u02e2\u02e3\5\u0094"+
-		"K\2\u02e3\u02e4\7%\2\2\u02e4\u02e9\3\2\2\2\u02e5\u02e6\7D\2\2\u02e6\u02e7"+
-		"\7-\2\2\u02e7\u02e9\5|?\2\u02e8\u02a6\3\2\2\2\u02e8\u02a7\3\2\2\2\u02e8"+
-		"\u02af\3\2\2\2\u02e8\u02b6\3\2\2\2\u02e8\u02bc\3\2\2\2\u02e8\u02c0\3\2"+
-		"\2\2\u02e8\u02c6\3\2\2\2\u02e8\u02d7\3\2\2\2\u02e8\u02dc\3\2\2\2\u02e8"+
-		"\u02e1\3\2\2\2\u02e8\u02e2\3\2\2\2\u02e8\u02e5\3\2\2\2\u02e9}\3\2\2\2"+
-		"\u02ea\u02eb\7\37\2\2\u02eb\u02ed\5\u0080A\2\u02ec\u02ee\7%\2\2\u02ed"+
-		"\u02ec\3\2\2\2\u02ed\u02ee\3\2\2\2\u02ee\u02ef\3\2\2\2\u02ef\u02f0\7 "+
-		"\2\2\u02f0\177\3\2\2\2\u02f1\u02f6\5\u0082B\2\u02f2\u02f3\7%\2\2\u02f3"+
-		"\u02f5\5\u0082B\2\u02f4\u02f2\3\2\2\2\u02f5\u02f8\3\2\2\2\u02f6\u02f4"+
-		"\3\2\2\2\u02f6\u02f7\3\2\2\2\u02f7\u0081\3\2\2\2\u02f8\u02f6\3\2\2\2\u02f9"+
-		"\u02fb\5\n\6\2\u02fa\u02f9\3\2\2\2\u02fb\u02fe\3\2\2\2\u02fc\u02fa\3\2"+
-		"\2\2\u02fc\u02fd\3\2\2\2\u02fd\u02ff\3\2\2\2\u02fe\u02fc\3\2\2\2\u02ff"+
-		"\u0300\5D#\2\u0300\u0301\5> \2\u0301\u0302\7)\2\2\u0302\u0303\5\u0094"+
-		"K\2\u0303\u0083\3\2\2\2\u0304\u0306\5\u0086D\2\u0305\u0304\3\2\2\2\u0306"+
-		"\u0307\3\2\2\2\u0307\u0305\3\2\2\2\u0307\u0308\3\2\2\2\u0308\u030a\3\2"+
-		"\2\2\u0309\u030b\5v<\2\u030a\u0309\3\2\2\2\u030b\u030c\3\2\2\2\u030c\u030a"+
-		"\3\2\2\2\u030c\u030d\3\2\2\2\u030d\u0085\3\2\2\2\u030e\u0311\7\6\2\2\u030f"+
-		"\u0312\5\u0094K\2\u0310\u0312\7D\2\2\u0311\u030f\3\2\2\2\u0311\u0310\3"+
-		"\2\2\2\u0312\u0313\3\2\2\2\u0313\u0317\7-\2\2\u0314\u0315\7\n\2\2\u0315"+
-		"\u0317\7-\2\2\u0316\u030e\3\2\2\2\u0316\u0314\3\2\2\2\u0317\u0087\3\2"+
-		"\2\2\u0318\u0325\5\u008cG\2\u0319\u031b\5\u008aF\2\u031a\u0319\3\2\2\2"+
-		"\u031a\u031b\3\2\2\2\u031b\u031c\3\2\2\2\u031c\u031e\7%\2\2\u031d\u031f"+
-		"\5\u0094K\2\u031e\u031d\3\2\2\2\u031e\u031f\3\2\2\2\u031f\u0320\3\2\2"+
-		"\2\u0320\u0322\7%\2\2\u0321\u0323\5\u0090I\2\u0322\u0321\3\2\2\2\u0322"+
-		"\u0323\3\2\2\2\u0323\u0325\3\2\2\2\u0324\u0318\3\2\2\2\u0324\u031a\3\2"+
-		"\2\2\u0325\u0089\3\2\2\2\u0326\u0329\5x=\2\u0327\u0329\5\u0090I\2\u0328"+
-		"\u0326\3\2\2\2\u0328\u0327\3\2\2\2\u0329\u008b\3\2\2\2\u032a\u032c\5\n"+
-		"\6\2\u032b\u032a\3\2\2\2\u032c\u032f\3\2\2\2\u032d\u032b\3\2\2\2\u032d"+
-		"\u032e\3\2\2\2\u032e\u0330\3\2\2\2\u032f\u032d\3\2\2\2\u0330\u0331\5\u00ac"+
-		"W\2\u0331\u0332\5> \2\u0332\u0333\7-\2\2\u0333\u0334\5\u0094K\2\u0334"+
-		"\u008d\3\2\2\2\u0335\u0336\7\37\2\2\u0336\u0337\5\u0094K\2\u0337\u0338"+
-		"\7 \2\2\u0338\u008f\3\2\2\2\u0339\u033e\5\u0094K\2\u033a\u033b\7&\2\2"+
-		"\u033b\u033d\5\u0094K\2\u033c\u033a\3\2\2\2\u033d\u0340\3\2\2\2\u033e"+
-		"\u033c\3\2\2\2\u033e\u033f\3\2\2\2\u033f\u0091\3\2\2\2\u0340\u033e\3\2"+
-		"\2\2\u0341\u0342\7D\2\2\u0342\u0344\7\37\2\2\u0343\u0345\5\u0090I\2\u0344"+
-		"\u0343\3\2\2\2\u0344\u0345\3\2\2\2\u0345\u0346\3\2\2\2\u0346\u0347\7 "+
-		"\2\2\u0347\u0093\3\2\2\2\u0348\u0349\bK\1\2\u0349\u0355\5\u0096L\2\u034a"+
-		"\u0355\5\u0092J\2\u034b\u034c\7\24\2\2\u034c\u0355\5\u009aN\2\u034d\u034e"+
-		"\7\37\2\2\u034e\u034f\5\u00acW\2\u034f\u0350\7 \2\2\u0350\u0351\5\u0094"+
-		"K\r\u0351\u0355\3\2\2\2\u0352\u0353\t\4\2\2\u0353\u0355\5\u0094K\13\u0354"+
-		"\u0348\3\2\2\2\u0354\u034a\3\2\2\2\u0354\u034b\3\2\2\2\u0354\u034d\3\2"+
-		"\2\2\u0354\u0352\3\2\2\2\u0355\u0386\3\2\2\2\u0356\u0357\f\n\2\2\u0357"+
-		"\u0358\t\5\2\2\u0358\u0385\5\u0094K\13\u0359\u035a\f\t\2\2\u035a\u035b"+
-		"\t\6\2\2\u035b\u0385\5\u0094K\n\u035c\u0364\f\b\2\2\u035d\u035e\7+\2\2"+
-		"\u035e\u0365\7+\2\2\u035f\u0360\7*\2\2\u0360\u0361\7*\2\2\u0361\u0365"+
-		"\7*\2\2\u0362\u0363\7*\2\2\u0363\u0365\7*\2\2\u0364\u035d\3\2\2\2\u0364"+
-		"\u035f\3\2\2\2\u0364\u0362\3\2\2\2\u0365\u0366\3\2\2\2\u0366\u0385\5\u0094"+
-		"K\t\u0367\u0368\f\7\2\2\u0368\u0369\t\7\2\2\u0369\u0385\5\u0094K\b\u036a"+
-		"\u036b\f\6\2\2\u036b\u036c\t\b\2\2\u036c\u0385\5\u0094K\7\u036d\u036e"+
-		"\f\5\2\2\u036e\u036f\7\62\2\2\u036f\u0385\5\u0094K\6\u0370\u0371\f\4\2"+
-		"\2\u0371\u0372\7\63\2\2\u0372\u0385\5\u0094K\5\u0373\u0374\f\3\2\2\u0374"+
-		"\u0375\t\t\2\2\u0375\u0385\5\u0094K\3\u0376\u0377\f\21\2\2\u0377\u037b"+
-		"\7\'\2\2\u0378\u037c\7D\2\2\u0379\u037c\5\u0092J\2\u037a\u037c\5\u00a2"+
-		"R\2\u037b\u0378\3\2\2\2\u037b\u0379\3\2\2\2\u037b\u037a\3\2\2\2\u037c"+
-		"\u0385\3\2\2\2\u037d\u037e\f\20\2\2\u037e\u037f\7#\2\2\u037f\u0380\5\u0094"+
-		"K\2\u0380\u0381\7$\2\2\u0381\u0385\3\2\2\2\u0382\u0383\f\f\2\2\u0383\u0385"+
-		"\t\n\2\2\u0384\u0356\3\2\2\2\u0384\u0359\3\2\2\2\u0384\u035c\3\2\2\2\u0384"+
-		"\u0367\3\2\2\2\u0384\u036a\3\2\2\2\u0384\u036d\3\2\2\2\u0384\u0370\3\2"+
-		"\2\2\u0384\u0373\3\2\2\2\u0384\u0376\3\2\2\2\u0384\u037d\3\2\2\2\u0384"+
-		"\u0382\3\2\2\2\u0385\u0388\3\2\2\2\u0386\u0384\3\2\2\2\u0386\u0387\3\2"+
-		"\2\2\u0387\u0095\3\2\2\2\u0388\u0386\3\2\2\2\u0389\u038a\7\37\2\2\u038a"+
-		"\u038b\5\u0094K\2\u038b\u038c\7 \2\2\u038c\u0397\3\2\2\2\u038d\u0397\5"+
-		"T+\2\u038e\u0397\7D\2\2\u038f\u0390\5\"\22\2\u0390\u0391\7\'\2\2\u0391"+
-		"\u0392\7\b\2\2\u0392\u0397\3\2\2\2\u0393\u0394\5\u00a8U\2\u0394\u0395"+
-		"\5\u00b4[\2\u0395\u0397\3\2\2\2\u0396\u0389\3\2\2\2\u0396\u038d\3\2\2"+
-		"\2\u0396\u038e\3\2\2\2\u0396\u038f\3\2\2\2\u0396\u0393\3\2\2\2\u0397\u0097"+
-		"\3\2\2\2\u0398\u0399\5D#\2\u0399\u039a\7\'\2\2\u039a\u039c\3\2\2\2\u039b"+
-		"\u0398\3\2\2\2\u039b\u039c\3\2\2\2\u039c\u03a0\3\2\2\2\u039d\u039f\5Z"+
-		".\2\u039e\u039d\3\2\2\2\u039f\u03a2\3\2\2\2\u03a0\u039e\3\2\2\2\u03a0"+
-		"\u03a1\3\2\2\2\u03a1\u03a3\3\2\2\2\u03a2\u03a0\3\2\2\2\u03a3\u03a5\7D"+
-		"\2\2\u03a4\u03a6\5\u00b0Y\2\u03a5\u03a4\3\2\2\2\u03a5\u03a6\3\2\2\2\u03a6"+
-		"\u0099\3\2\2\2\u03a7\u03a8\5\u00a8U\2\u03a8\u03a9\5\u009cO\2\u03a9\u03aa"+
-		"\5\u00a0Q\2\u03aa\u03af\3\2\2\2\u03ab\u03ac\5\u009cO\2\u03ac\u03ad\5\u00a0"+
-		"Q\2\u03ad\u03af\3\2\2\2\u03ae\u03a7\3\2\2\2\u03ae\u03ab\3\2\2\2\u03af"+
-		"\u009b\3\2\2\2\u03b0\u03b2\7D\2\2\u03b1\u03b3\5\u00a4S\2\u03b2\u03b1\3"+
-		"\2\2\2\u03b2\u03b3\3\2\2\2\u03b3\u03bb\3\2\2\2\u03b4\u03b5\7\'\2\2\u03b5"+
-		"\u03b7\7D\2\2\u03b6\u03b8\5\u00a4S\2\u03b7\u03b6\3\2\2\2\u03b7\u03b8\3"+
-		"\2\2\2\u03b8\u03ba\3\2\2\2\u03b9\u03b4\3\2\2\2\u03ba\u03bd\3\2\2\2\u03bb"+
-		"\u03b9\3\2\2\2\u03bb\u03bc\3\2\2\2\u03bc\u03c0\3\2\2\2\u03bd\u03bb\3\2"+
-		"\2\2\u03be\u03c0\5\u00aeX\2\u03bf\u03b0\3\2\2\2\u03bf\u03be\3\2\2\2\u03c0"+
-		"\u009d\3\2\2\2\u03c1\u03c3\7D\2\2\u03c2\u03c4\5\u00a6T\2\u03c3\u03c2\3"+
-		"\2\2\2\u03c3\u03c4\3\2\2\2\u03c4\u03c5\3\2\2\2\u03c5\u03c6\5\u00a0Q\2"+
-		"\u03c6\u009f\3\2\2\2\u03c7\u03c9\5\u00b6\\\2\u03c8\u03ca\5\26\f\2\u03c9"+
-		"\u03c8\3\2\2\2\u03c9\u03ca\3\2\2\2\u03ca\u00a1\3\2\2\2\u03cb\u03cc\5\u00a8"+
-		"U\2\u03cc\u03cd\5\u00b4[\2\u03cd\u00a3\3\2\2\2\u03ce\u03cf\7+\2\2\u03cf"+
-		"\u03d2\7*\2\2\u03d0\u03d2\5\u00b0Y\2\u03d1\u03ce\3\2\2\2\u03d1\u03d0\3"+
-		"\2\2\2\u03d2\u00a5\3\2\2\2\u03d3\u03d4\7+\2\2\u03d4\u03d7\7*\2\2\u03d5"+
-		"\u03d7\5\u00a8U\2\u03d6\u03d3\3\2\2\2\u03d6\u03d5\3\2\2\2\u03d7\u00a7"+
-		"\3\2\2\2\u03d8\u03d9\7+\2\2\u03d9\u03da\5\u00aaV\2\u03da\u03db\7*\2\2"+
-		"\u03db\u00a9\3\2\2\2\u03dc\u03e1\5\u00acW\2\u03dd\u03de\7&\2\2\u03de\u03e0"+
-		"\5\u00acW\2\u03df\u03dd\3\2\2\2\u03e0\u03e3\3\2\2\2\u03e1\u03df\3\2\2"+
-		"\2\u03e1\u03e2\3\2\2\2\u03e2\u00ab\3\2\2\2\u03e3\u03e1\3\2\2\2\u03e4\u03e6"+
-		"\5Z.\2\u03e5\u03e4\3\2\2\2\u03e5\u03e6\3\2\2\2\u03e6\u03e9\3\2\2\2\u03e7"+
-		"\u03ea\5D#\2\u03e8\u03ea\5\u00aeX\2\u03e9\u03e7\3\2\2\2\u03e9\u03e8\3"+
-		"\2\2\2\u03ea\u03ef\3\2\2\2\u03eb\u03ec\7#\2\2\u03ec\u03ee\7$\2\2\u03ed"+
-		"\u03eb\3\2\2\2\u03ee\u03f1\3\2\2\2\u03ef\u03ed\3\2\2\2\u03ef\u03f0\3\2"+
-		"\2\2\u03f0\u00ad\3\2\2\2\u03f1\u03ef\3\2\2\2\u03f2\u03f3\t\13\2\2\u03f3"+
-		"\u00af\3\2\2\2\u03f4\u03f5\7+\2\2\u03f5\u03fa\5F$\2\u03f6\u03f7\7&\2\2"+
-		"\u03f7\u03f9\5F$\2\u03f8\u03f6\3\2\2\2\u03f9\u03fc\3\2\2\2\u03fa\u03f8"+
-		"\3\2\2\2\u03fa\u03fb\3\2\2\2\u03fb\u03fd\3\2\2\2\u03fc\u03fa\3\2\2\2\u03fd"+
-		"\u03fe\7*\2\2\u03fe\u00b1\3\2\2\2\u03ff\u0406\5\u00b6\\\2\u0400\u0401"+
-		"\7\'\2\2\u0401\u0403\7D\2\2\u0402\u0404\5\u00b6\\\2\u0403\u0402\3\2\2"+
-		"\2\u0403\u0404\3\2\2\2\u0404\u0406\3\2\2\2\u0405\u03ff\3\2\2\2\u0405\u0400"+
-		"\3\2\2\2\u0406\u00b3\3\2\2\2\u0407\u0408\7D\2\2\u0408\u0409\5\u00b6\\"+
-		"\2\u0409\u00b5\3\2\2\2\u040a\u040c\7\37\2\2\u040b\u040d\5\u0090I\2\u040c"+
-		"\u040b\3\2\2\2\u040c\u040d\3\2\2\2\u040d\u040e\3\2\2\2\u040e\u040f\7 "+
-		"\2\2\u040f\u00b7\3\2\2\2z\u00bb\u00c3\u00c9\u00cc\u00d5\u00d9\u00de\u00e8"+
+		"\u02e0\3\2\2\2\u02e0\u02ef\7%\2\2\u02e1\u02ef\7%\2\2\u02e2\u02e3\7\25"+
+		"\2\2\u02e3\u02e4\7\37\2\2\u02e4\u02e5\5T+\2\u02e5\u02e6\7 \2\2\u02e6\u02e7"+
+		"\7%\2\2\u02e7\u02ef\3\2\2\2\u02e8\u02e9\5\u0094K\2\u02e9\u02ea\7%\2\2"+
+		"\u02ea\u02ef\3\2\2\2\u02eb\u02ec\7D\2\2\u02ec\u02ed\7-\2\2\u02ed\u02ef"+
+		"\5|?\2\u02ee\u02a6\3\2\2\2\u02ee\u02a7\3\2\2\2\u02ee\u02af\3\2\2\2\u02ee"+
+		"\u02b6\3\2\2\2\u02ee\u02bc\3\2\2\2\u02ee\u02c0\3\2\2\2\u02ee\u02c6\3\2"+
+		"\2\2\u02ee\u02d7\3\2\2\2\u02ee\u02dc\3\2\2\2\u02ee\u02e1\3\2\2\2\u02ee"+
+		"\u02e2\3\2\2\2\u02ee\u02e8\3\2\2\2\u02ee\u02eb\3\2\2\2\u02ef}\3\2\2\2"+
+		"\u02f0\u02f1\7\37\2\2\u02f1\u02f3\5\u0080A\2\u02f2\u02f4\7%\2\2\u02f3"+
+		"\u02f2\3\2\2\2\u02f3\u02f4\3\2\2\2\u02f4\u02f5\3\2\2\2\u02f5\u02f6\7 "+
+		"\2\2\u02f6\177\3\2\2\2\u02f7\u02fc\5\u0082B\2\u02f8\u02f9\7%\2\2\u02f9"+
+		"\u02fb\5\u0082B\2\u02fa\u02f8\3\2\2\2\u02fb\u02fe\3\2\2\2\u02fc\u02fa"+
+		"\3\2\2\2\u02fc\u02fd\3\2\2\2\u02fd\u0081\3\2\2\2\u02fe\u02fc\3\2\2\2\u02ff"+
+		"\u0301\5\n\6\2\u0300\u02ff\3\2\2\2\u0301\u0304\3\2\2\2\u0302\u0300\3\2"+
+		"\2\2\u0302\u0303\3\2\2\2\u0303\u0305\3\2\2\2\u0304\u0302\3\2\2\2\u0305"+
+		"\u0306\5D#\2\u0306\u0307\5> \2\u0307\u0308\7)\2\2\u0308\u0309\5\u0094"+
+		"K\2\u0309\u0083\3\2\2\2\u030a\u030c\5\u0086D\2\u030b\u030a\3\2\2\2\u030c"+
+		"\u030d\3\2\2\2\u030d\u030b\3\2\2\2\u030d\u030e\3\2\2\2\u030e\u0310\3\2"+
+		"\2\2\u030f\u0311\5v<\2\u0310\u030f\3\2\2\2\u0311\u0312\3\2\2\2\u0312\u0310"+
+		"\3\2\2\2\u0312\u0313\3\2\2\2\u0313\u0085\3\2\2\2\u0314\u0317\7\6\2\2\u0315"+
+		"\u0318\5\u0094K\2\u0316\u0318\7D\2\2\u0317\u0315\3\2\2\2\u0317\u0316\3"+
+		"\2\2\2\u0318\u0319\3\2\2\2\u0319\u031d\7-\2\2\u031a\u031b\7\n\2\2\u031b"+
+		"\u031d\7-\2\2\u031c\u0314\3\2\2\2\u031c\u031a\3\2\2\2\u031d\u0087\3\2"+
+		"\2\2\u031e\u032b\5\u008cG\2\u031f\u0321\5\u008aF\2\u0320\u031f\3\2\2\2"+
+		"\u0320\u0321\3\2\2\2\u0321\u0322\3\2\2\2\u0322\u0324\7%\2\2\u0323\u0325"+
+		"\5\u0094K\2\u0324\u0323\3\2\2\2\u0324\u0325\3\2\2\2\u0325\u0326\3\2\2"+
+		"\2\u0326\u0328\7%\2\2\u0327\u0329\5\u0090I\2\u0328\u0327\3\2\2\2\u0328"+
+		"\u0329\3\2\2\2\u0329\u032b\3\2\2\2\u032a\u031e\3\2\2\2\u032a\u0320\3\2"+
+		"\2\2\u032b\u0089\3\2\2\2\u032c\u032f\5x=\2\u032d\u032f\5\u0090I\2\u032e"+
+		"\u032c\3\2\2\2\u032e\u032d\3\2\2\2\u032f\u008b\3\2\2\2\u0330\u0332\5\n"+
+		"\6\2\u0331\u0330\3\2\2\2\u0332\u0335\3\2\2\2\u0333\u0331\3\2\2\2\u0333"+
+		"\u0334\3\2\2\2\u0334\u0336\3\2\2\2\u0335\u0333\3\2\2\2\u0336\u0337\5\u00ac"+
+		"W\2\u0337\u0338\5> \2\u0338\u0339\7-\2\2\u0339\u033a\5\u0094K\2\u033a"+
+		"\u008d\3\2\2\2\u033b\u033c\7\37\2\2\u033c\u033d\5\u0094K\2\u033d\u033e"+
+		"\7 \2\2\u033e\u008f\3\2\2\2\u033f\u0344\5\u0094K\2\u0340\u0341\7&\2\2"+
+		"\u0341\u0343\5\u0094K\2\u0342\u0340\3\2\2\2\u0343\u0346\3\2\2\2\u0344"+
+		"\u0342\3\2\2\2\u0344\u0345\3\2\2\2\u0345\u0091\3\2\2\2\u0346\u0344\3\2"+
+		"\2\2\u0347\u0348\7D\2\2\u0348\u034a\7\37\2\2\u0349\u034b\5\u0090I\2\u034a"+
+		"\u0349\3\2\2\2\u034a\u034b\3\2\2\2\u034b\u034c\3\2\2\2\u034c\u034d\7 "+
+		"\2\2\u034d\u0093\3\2\2\2\u034e\u034f\bK\1\2\u034f\u035b\5\u0096L\2\u0350"+
+		"\u035b\5\u0092J\2\u0351\u0352\7\24\2\2\u0352\u035b\5\u009aN\2\u0353\u0354"+
+		"\7\37\2\2\u0354\u0355\5\u00acW\2\u0355\u0356\7 \2\2\u0356\u0357\5\u0094"+
+		"K\r\u0357\u035b\3\2\2\2\u0358\u0359\t\4\2\2\u0359\u035b\5\u0094K\13\u035a"+
+		"\u034e\3\2\2\2\u035a\u0350\3\2\2\2\u035a\u0351\3\2\2\2\u035a\u0353\3\2"+
+		"\2\2\u035a\u0358\3\2\2\2\u035b\u038c\3\2\2\2\u035c\u035d\f\n\2\2\u035d"+
+		"\u035e\t\5\2\2\u035e\u038b\5\u0094K\13\u035f\u0360\f\t\2\2\u0360\u0361"+
+		"\t\6\2\2\u0361\u038b\5\u0094K\n\u0362\u036a\f\b\2\2\u0363\u0364\7+\2\2"+
+		"\u0364\u036b\7+\2\2\u0365\u0366\7*\2\2\u0366\u0367\7*\2\2\u0367\u036b"+
+		"\7*\2\2\u0368\u0369\7*\2\2\u0369\u036b\7*\2\2\u036a\u0363\3\2\2\2\u036a"+
+		"\u0365\3\2\2\2\u036a\u0368\3\2\2\2\u036b\u036c\3\2\2\2\u036c\u038b\5\u0094"+
+		"K\t\u036d\u036e\f\7\2\2\u036e\u036f\t\7\2\2\u036f\u038b\5\u0094K\b\u0370"+
+		"\u0371\f\6\2\2\u0371\u0372\t\b\2\2\u0372\u038b\5\u0094K\7\u0373\u0374"+
+		"\f\5\2\2\u0374\u0375\7\62\2\2\u0375\u038b\5\u0094K\6\u0376\u0377\f\4\2"+
+		"\2\u0377\u0378\7\63\2\2\u0378\u038b\5\u0094K\5\u0379\u037a\f\3\2\2\u037a"+
+		"\u037b\t\t\2\2\u037b\u038b\5\u0094K\3\u037c\u037d\f\21\2\2\u037d\u0381"+
+		"\7\'\2\2\u037e\u0382\7D\2\2\u037f\u0382\5\u0092J\2\u0380\u0382\5\u00a2"+
+		"R\2\u0381\u037e\3\2\2\2\u0381\u037f\3\2\2\2\u0381\u0380\3\2\2\2\u0382"+
+		"\u038b\3\2\2\2\u0383\u0384\f\20\2\2\u0384\u0385\7#\2\2\u0385\u0386\5\u0094"+
+		"K\2\u0386\u0387\7$\2\2\u0387\u038b\3\2\2\2\u0388\u0389\f\f\2\2\u0389\u038b"+
+		"\t\n\2\2\u038a\u035c\3\2\2\2\u038a\u035f\3\2\2\2\u038a\u0362\3\2\2\2\u038a"+
+		"\u036d\3\2\2\2\u038a\u0370\3\2\2\2\u038a\u0373\3\2\2\2\u038a\u0376\3\2"+
+		"\2\2\u038a\u0379\3\2\2\2\u038a\u037c\3\2\2\2\u038a\u0383\3\2\2\2\u038a"+
+		"\u0388\3\2\2\2\u038b\u038e\3\2\2\2\u038c\u038a\3\2\2\2\u038c\u038d\3\2"+
+		"\2\2\u038d\u0095\3\2\2\2\u038e\u038c\3\2\2\2\u038f\u0390\7\37\2\2\u0390"+
+		"\u0391\5\u0094K\2\u0391\u0392\7 \2\2\u0392\u039d\3\2\2\2\u0393\u039d\5"+
+		"T+\2\u0394\u039d\7D\2\2\u0395\u0396\5\"\22\2\u0396\u0397\7\'\2\2\u0397"+
+		"\u0398\7\b\2\2\u0398\u039d\3\2\2\2\u0399\u039a\5\u00a8U\2\u039a\u039b"+
+		"\5\u00b4[\2\u039b\u039d\3\2\2\2\u039c\u038f\3\2\2\2\u039c\u0393\3\2\2"+
+		"\2\u039c\u0394\3\2\2\2\u039c\u0395\3\2\2\2\u039c\u0399\3\2\2\2\u039d\u0097"+
+		"\3\2\2\2\u039e\u039f\5D#\2\u039f\u03a0\7\'\2\2\u03a0\u03a2\3\2\2\2\u03a1"+
+		"\u039e\3\2\2\2\u03a1\u03a2\3\2\2\2\u03a2\u03a6\3\2\2\2\u03a3\u03a5\5Z"+
+		".\2\u03a4\u03a3\3\2\2\2\u03a5\u03a8\3\2\2\2\u03a6\u03a4\3\2\2\2\u03a6"+
+		"\u03a7\3\2\2\2\u03a7\u03a9\3\2\2\2\u03a8\u03a6\3\2\2\2\u03a9\u03ab\7D"+
+		"\2\2\u03aa\u03ac\5\u00b0Y\2\u03ab\u03aa\3\2\2\2\u03ab\u03ac\3\2\2\2\u03ac"+
+		"\u0099\3\2\2\2\u03ad\u03ae\5\u00a8U\2\u03ae\u03af\5\u009cO\2\u03af\u03b0"+
+		"\5\u00a0Q\2\u03b0\u03b5\3\2\2\2\u03b1\u03b2\5\u009cO\2\u03b2\u03b3\5\u00a0"+
+		"Q\2\u03b3\u03b5\3\2\2\2\u03b4\u03ad\3\2\2\2\u03b4\u03b1\3\2\2\2\u03b5"+
+		"\u009b\3\2\2\2\u03b6\u03b8\7D\2\2\u03b7\u03b9\5\u00a4S\2\u03b8\u03b7\3"+
+		"\2\2\2\u03b8\u03b9\3\2\2\2\u03b9\u03c1\3\2\2\2\u03ba\u03bb\7\'\2\2\u03bb"+
+		"\u03bd\7D\2\2\u03bc\u03be\5\u00a4S\2\u03bd\u03bc\3\2\2\2\u03bd\u03be\3"+
+		"\2\2\2\u03be\u03c0\3\2\2\2\u03bf\u03ba\3\2\2\2\u03c0\u03c3\3\2\2\2\u03c1"+
+		"\u03bf\3\2\2\2\u03c1\u03c2\3\2\2\2\u03c2\u03c6\3\2\2\2\u03c3\u03c1\3\2"+
+		"\2\2\u03c4\u03c6\5\u00aeX\2\u03c5\u03b6\3\2\2\2\u03c5\u03c4\3\2\2\2\u03c6"+
+		"\u009d\3\2\2\2\u03c7\u03c9\7D\2\2\u03c8\u03ca\5\u00a6T\2\u03c9\u03c8\3"+
+		"\2\2\2\u03c9\u03ca\3\2\2\2\u03ca\u03cb\3\2\2\2\u03cb\u03cc\5\u00a0Q\2"+
+		"\u03cc\u009f\3\2\2\2\u03cd\u03cf\5\u00b6\\\2\u03ce\u03d0\5\26\f\2\u03cf"+
+		"\u03ce\3\2\2\2\u03cf\u03d0\3\2\2\2\u03d0\u00a1\3\2\2\2\u03d1\u03d2\5\u00a8"+
+		"U\2\u03d2\u03d3\5\u00b4[\2\u03d3\u00a3\3\2\2\2\u03d4\u03d5\7+\2\2\u03d5"+
+		"\u03d8\7*\2\2\u03d6\u03d8\5\u00b0Y\2\u03d7\u03d4\3\2\2\2\u03d7\u03d6\3"+
+		"\2\2\2\u03d8\u00a5\3\2\2\2\u03d9\u03da\7+\2\2\u03da\u03dd\7*\2\2\u03db"+
+		"\u03dd\5\u00a8U\2\u03dc\u03d9\3\2\2\2\u03dc\u03db\3\2\2\2\u03dd\u00a7"+
+		"\3\2\2\2\u03de\u03df\7+\2\2\u03df\u03e0\5\u00aaV\2\u03e0\u03e1\7*\2\2"+
+		"\u03e1\u00a9\3\2\2\2\u03e2\u03e7\5\u00acW\2\u03e3\u03e4\7&\2\2\u03e4\u03e6"+
+		"\5\u00acW\2\u03e5\u03e3\3\2\2\2\u03e6\u03e9\3\2\2\2\u03e7\u03e5\3\2\2"+
+		"\2\u03e7\u03e8\3\2\2\2\u03e8\u00ab\3\2\2\2\u03e9\u03e7\3\2\2\2\u03ea\u03ec"+
+		"\5Z.\2\u03eb\u03ea\3\2\2\2\u03eb\u03ec\3\2\2\2\u03ec\u03ef\3\2\2\2\u03ed"+
+		"\u03f0\5D#\2\u03ee\u03f0\5\u00aeX\2\u03ef\u03ed\3\2\2\2\u03ef\u03ee\3"+
+		"\2\2\2\u03f0\u03f5\3\2\2\2\u03f1\u03f2\7#\2\2\u03f2\u03f4\7$\2\2\u03f3"+
+		"\u03f1\3\2\2\2\u03f4\u03f7\3\2\2\2\u03f5\u03f3\3\2\2\2\u03f5\u03f6\3\2"+
+		"\2\2\u03f6\u00ad\3\2\2\2\u03f7\u03f5\3\2\2\2\u03f8\u03f9\t\13\2\2\u03f9"+
+		"\u00af\3\2\2\2\u03fa\u03fb\7+\2\2\u03fb\u0400\5F$\2\u03fc\u03fd\7&\2\2"+
+		"\u03fd\u03ff\5F$\2\u03fe\u03fc\3\2\2\2\u03ff\u0402\3\2\2\2\u0400\u03fe"+
+		"\3\2\2\2\u0400\u0401\3\2\2\2\u0401\u0403\3\2\2\2\u0402\u0400\3\2\2\2\u0403"+
+		"\u0404\7*\2\2\u0404\u00b1\3\2\2\2\u0405\u040c\5\u00b6\\\2\u0406\u0407"+
+		"\7\'\2\2\u0407\u0409\7D\2\2\u0408\u040a\5\u00b6\\\2\u0409\u0408\3\2\2"+
+		"\2\u0409\u040a\3\2\2\2\u040a\u040c\3\2\2\2\u040b\u0405\3\2\2\2\u040b\u0406"+
+		"\3\2\2\2\u040c\u00b3\3\2\2\2\u040d\u040e\7D\2\2\u040e\u040f\5\u00b6\\"+
+		"\2\u040f\u00b5\3\2\2\2\u0410\u0412\7\37\2\2\u0411\u0413\5\u0090I\2\u0412"+
+		"\u0411\3\2\2\2\u0412\u0413\3\2\2\2\u0413\u0414\3\2\2\2\u0414\u0415\7 "+
+		"\2\2\u0415\u00b7\3\2\2\2z\u00bb\u00c3\u00c9\u00cc\u00d5\u00d9\u00de\u00e8"+
 		"\u00f0\u00fa\u0100\u0108\u0111\u0118\u011e\u0122\u012c\u0135\u013c\u0140"+
 		"\u0153\u0158\u0160\u0168\u0172\u017b\u0183\u0188\u0190\u0199\u01a3\u01a9"+
 		"\u01b0\u01b5\u01bd\u01c1\u01c3\u01c9\u01ce\u01d2\u01d7\u01de\u01e3\u01ec"+
 		"\u01f1\u01f4\u01f9\u0202\u020e\u0216\u0221\u0224\u022b\u0235\u023d\u0240"+
 		"\u0243\u0250\u0258\u025d\u0265\u0269\u026d\u026f\u0273\u0279\u0284\u028e"+
-		"\u0293\u029c\u02a1\u02a4\u02ab\u02b4\u02cc\u02d2\u02d9\u02de\u02e8\u02ed"+
-		"\u02f6\u02fc\u0307\u030c\u0311\u0316\u031a\u031e\u0322\u0324\u0328\u032d"+
-		"\u033e\u0344\u0354\u0364\u037b\u0384\u0386\u0396\u039b\u03a0\u03a5\u03ae"+
-		"\u03b2\u03b7\u03bb\u03bf\u03c3\u03c9\u03d1\u03d6\u03e1\u03e5\u03e9\u03ef"+
-		"\u03fa\u0403\u0405\u040c";
+		"\u0293\u029c\u02a1\u02a4\u02ab\u02b4\u02cc\u02d2\u02d9\u02de\u02ee\u02f3"+
+		"\u02fc\u0302\u030d\u0312\u0317\u031c\u0320\u0324\u0328\u032a\u032e\u0333"+
+		"\u0344\u034a\u035a\u036a\u0381\u038a\u038c\u039c\u03a1\u03a6\u03ab\u03b4"+
+		"\u03b8\u03bd\u03c1\u03c5\u03c9\u03cf\u03d7\u03dc\u03e7\u03eb\u03ef\u03f5"+
+		"\u0400\u0409\u040b\u0412";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

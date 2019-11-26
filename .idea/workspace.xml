@@ -34,19 +34,19 @@
     <property name="$PROJECT_DIR$/Lexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/gen-listener" value="true" />
-    <property name="$PROJECT_DIR$/NutLexer.g4::/gen-visitor" value="false" />
-    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutLexer.g4::/gen-visitor" value="true" />
+    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/NutParser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutParser.g4::/gen-listener" value="true" />
-    <property name="$PROJECT_DIR$/NutParser.g4::/gen-visitor" value="false" />
-    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutParser.g4::/gen-visitor" value="true" />
+    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/Parser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Parser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>

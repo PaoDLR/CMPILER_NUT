@@ -326,6 +326,7 @@ statement
     | RETURN expression? ';'
     | BREAK IDENTIFIER? ';'
     | SEMI
+    | PRINT '(' literal ')' ';'
     | statementExpression=expression ';'
     | identifierLabel=IDENTIFIER ':' statement
     ;

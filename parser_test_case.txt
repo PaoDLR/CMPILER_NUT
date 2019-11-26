@@ -14,7 +14,7 @@ expose sleep testCode{
     return (2*5)+2(5);
     }
 
-    main()
+    kassadin main()
     {
     printing("Hello"+2+);
     printing(Hi);
@@ -24,4 +24,12 @@ expose sleep testCode{
         digimon y = myFunc(2,3)();
     }
     }
+}
+
+expose sleep testCase{
+
+   expose shiv kassadin main(){
+      printing("Hello world!");
+   }
+
 }
