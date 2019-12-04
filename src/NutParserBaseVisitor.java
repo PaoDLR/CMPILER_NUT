@@ -19,6 +19,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	HashMap<String, Integer> intVariable = new HashMap<String, Integer>();
 	HashMap<String, Float> floatVariable = new HashMap<String, Float>();
 	HashMap<String, Double> doubleVariable = new HashMap<String, Double>();
+	HashMap<String, Boolean> booleanVariable = new HashMap<String, Boolean>();
 
 	public NutParserBaseVisitor(NutInterpreter nutInterpreter){
 
@@ -461,22 +462,37 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			String varValue = (String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
 
 			stringVariable.put(varName, varValue.replaceAll("\"", ""));
-			System.out.println("JAIOEWVIOAWHEVWHJEIOP");
+
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("int")){
-			visit(ctx.variableDeclarators().variableDeclarator(2));
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			int varValue = (Integer) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			intVariable.put(varName, varValue);
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("boolean")){
-			visit(ctx.variableDeclarators().variableDeclarator(2));
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			boolean varValue = (Boolean) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			booleanVariable.put(varName, varValue);
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("char")){
-			visit(ctx.variableDeclarators().variableDeclarator(2));
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			char varValue = (Character) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			charVariable.put(varName, varValue);
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("float")){
-			visit(ctx.variableDeclarators().variableDeclarator(2));
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			float varValue = (Float) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			floatVariable.put(varName, varValue);
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("double")){
-			visit(ctx.variableDeclarators().variableDeclarator(2));
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			double varValue = (Double) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			doubleVariable.put(varName, varValue);
 
 		}
 

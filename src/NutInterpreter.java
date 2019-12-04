@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class NutInterpreter extends JFrame{
     private JButton btnInterpret;
@@ -18,6 +19,8 @@ public class NutInterpreter extends JFrame{
 
     public NutInterpreter(String interpreter){
         super(interpreter);
+
+
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(interpreterPanel);
