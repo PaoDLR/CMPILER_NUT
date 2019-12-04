@@ -16,7 +16,7 @@ public class NutInterpreter extends JFrame{
     private JPanel interpreterPanel;
     private JButton clearOutput;
     private NutInterpreter nut;
-    
+
     HashMap<String, String> stringVariable = new HashMap<String, String>();
     HashMap<String, Character> charVariable = new HashMap<String, Character>();
     HashMap<String, Integer> intVariable = new HashMap<String, Integer>();
