@@ -14,6 +14,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	NutInterpreter nutInterpreter;
 
 	public NutParserBaseVisitor(NutInterpreter nutInterpreter){
+
 		this.nutInterpreter = nutInterpreter;
 	}
 
@@ -303,7 +304,9 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitQualifiedName(NutParser.QualifiedNameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitQualifiedName(NutParser.QualifiedNameContext ctx) {
+		return (T) ctx.getText();
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -467,9 +470,12 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitPrintStatement(NutParser.PrintStatementContext ctx) {
-		if(ctx.getChild(0).getText().equals("printing")){
+		if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.LiteralContext){
 			String s = (String) visit(ctx.literal());
 			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
+		}else if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.QualifiedNameContext){
+			String s = (String) visit(ctx.qualifiedName());
+			nutInterpreter.setOutputStream(s);
 		}
 		return visitChildren(ctx);
 	}

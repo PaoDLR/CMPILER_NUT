@@ -339,7 +339,7 @@ statement
 printStatement
     :
     | PRINT '(' literal ')'
-    | PRINT '(' declaration ')'
+    | PRINT '(' qualifiedName ')'
     ;
 
 resourceSpecification

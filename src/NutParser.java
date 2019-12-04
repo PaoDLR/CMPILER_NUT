@@ -5037,8 +5037,8 @@ public class NutParser extends Parser {
 			return getRuleContext(LiteralContext.class,0);
 		}
 		public TerminalNode RPAREN() { return getToken(NutParser.RPAREN, 0); }
-		public DeclarationContext declaration() {
-			return getRuleContext(DeclarationContext.class,0);
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
 		public PrintStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -5092,7 +5092,7 @@ public class NutParser extends Parser {
 				setState(762);
 				match(LPAREN);
 				setState(763);
-				declaration();
+				qualifiedName();
 				setState(764);
 				match(RPAREN);
 				}
@@ -7864,7 +7864,7 @@ public class NutParser extends Parser {
 		"\u02e9\3\2\2\2\u02f3\u02ea\3\2\2\2\u02f3\u02ed\3\2\2\2\u02f3\u02f0\3\2"+
 		"\2\2\u02f4\177\3\2\2\2\u02f5\u0301\3\2\2\2\u02f6\u02f7\7\25\2\2\u02f7"+
 		"\u02f8\7\37\2\2\u02f8\u02f9\5T+\2\u02f9\u02fa\7 \2\2\u02fa\u0301\3\2\2"+
-		"\2\u02fb\u02fc\7\25\2\2\u02fc\u02fd\7\37\2\2\u02fd\u02fe\5|?\2\u02fe\u02ff"+
+		"\2\u02fb\u02fc\7\25\2\2\u02fc\u02fd\7\37\2\2\u02fd\u02fe\5R*\2\u02fe\u02ff"+
 		"\7 \2\2\u02ff\u0301\3\2\2\2\u0300\u02f5\3\2\2\2\u0300\u02f6\3\2\2\2\u0300"+
 		"\u02fb\3\2\2\2\u0301\u0081\3\2\2\2\u0302\u0303\7\37\2\2\u0303\u0305\5"+
 		"\u0084C\2\u0304\u0306\7%\2\2\u0305\u0304\3\2\2\2\u0305\u0306\3\2\2\2\u0306"+
