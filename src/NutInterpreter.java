@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class NutInterpreter extends JFrame{
     private JButton btnInterpret;
@@ -15,6 +16,12 @@ public class NutInterpreter extends JFrame{
     private JPanel interpreterPanel;
     private JButton clearOutput;
     private NutInterpreter nut;
+    
+    HashMap<String, String> stringVariable = new HashMap<String, String>();
+    HashMap<String, Character> charVariable = new HashMap<String, Character>();
+    HashMap<String, Integer> intVariable = new HashMap<String, Integer>();
+    HashMap<String, Float> floatVariable = new HashMap<String, Float>();
+    HashMap<String, Double> doubleVariable = new HashMap<String, Double>();
 
     public NutInterpreter(String interpreter){
         super(interpreter);

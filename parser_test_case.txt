@@ -1,7 +1,7 @@
 expose sleep testCase{
 
     expose shiv kassadin main(){
-       String x = "Hello World!";
+       string x = "Hello World!";
        printing(x);
     }
  }
