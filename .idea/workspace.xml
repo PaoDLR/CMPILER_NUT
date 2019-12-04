@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMPILER_NUT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CMPILER_NUT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationConstantRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationConstantRestContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationContext.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodOrConstantRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodOrConstantRestContext.class" afterDir="false" />
@@ -100,20 +98,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser_test_case.txt" beforeDir="false" afterPath="$PROJECT_DIR$/parser_test_case.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +146,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="ParserTree" type="Application" factoryName="Application">
@@ -216,21 +204,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575453303466" />
-    <state width="1877" height="143" key="GridCell.Tab.0.bottom" timestamp="1575454434103">
+    <state width="1877" height="117" key="GridCell.Tab.0.bottom" timestamp="1575455385143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="143" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
-    <state width="1877" height="143" key="GridCell.Tab.0.center" timestamp="1575454434103">
+    <state width="1877" height="117" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575455385143" />
+    <state width="1877" height="117" key="GridCell.Tab.0.center" timestamp="1575455385143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="143" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
-    <state width="1877" height="143" key="GridCell.Tab.0.left" timestamp="1575454434102">
+    <state width="1877" height="117" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575455385143" />
+    <state width="1877" height="117" key="GridCell.Tab.0.left" timestamp="1575455385142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="143" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434102" />
-    <state width="1877" height="143" key="GridCell.Tab.0.right" timestamp="1575454434103">
+    <state width="1877" height="117" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575455385142" />
+    <state width="1877" height="117" key="GridCell.Tab.0.right" timestamp="1575455385143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="143" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
+    <state width="1877" height="117" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575455385143" />
   </component>
 </project>

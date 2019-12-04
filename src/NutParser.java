@@ -26,8 +26,7 @@ public class NutParser extends Parser {
 		AMP=57, DOTS=58, AT=59, QM=60, ADD_ASSIGN=61, SUB_ASSIGN=62, MUL_ASSIGN=63, 
 		DIV_ASSIGN=64, WS=65, IDENTIFIER=66, DECIMAL_LITERAL=67, HEX_LITERAL=68, 
 		OCT_LITERAL=69, BINARY_LITERAL=70, FLOAT_LITERAL=71, HEX_FLOAT_LITERAL=72, 
-		BOOL_LITERAL=73, CHAR_LITERAL=74, STRING_LITERAL=75, COMMENT=76, LINE_COMMENT=77, 
-		SEMICOLON=78;
+		BOOL_LITERAL=73, CHAR_LITERAL=74, STRING_LITERAL=75, COMMENT=76, LINE_COMMENT=77;
 	public static final int
 		RULE_compilationUnit = 0, RULE_typeDeclaration = 1, RULE_modifier = 2, 
 		RULE_classOrInterfaceModifier = 3, RULE_variableModifier = 4, RULE_classDeclaration = 5, 
@@ -116,7 +115,7 @@ public class NutParser extends Parser {
 			"QM", "ADD_ASSIGN", "SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "WS", "IDENTIFIER", 
 			"DECIMAL_LITERAL", "HEX_LITERAL", "OCT_LITERAL", "BINARY_LITERAL", "FLOAT_LITERAL", 
 			"HEX_FLOAT_LITERAL", "BOOL_LITERAL", "CHAR_LITERAL", "STRING_LITERAL", 
-			"COMMENT", "LINE_COMMENT", "SEMICOLON"
+			"COMMENT", "LINE_COMMENT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -4678,7 +4677,7 @@ public class NutParser extends Parser {
 			return getRuleContext(TypeTypeContext.class,0);
 		}
 		public TerminalNode IDENTIFIER() { return getToken(NutParser.IDENTIFIER, 0); }
-		public TerminalNode SEMICOLON() { return getToken(NutParser.SEMICOLON, 0); }
+		public TerminalNode SEMI() { return getToken(NutParser.SEMI, 0); }
 		public DeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -4709,7 +4708,7 @@ public class NutParser extends Parser {
 			setState(679);
 			match(IDENTIFIER);
 			setState(680);
-			match(SEMICOLON);
+			match(SEMI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7519,7 +7518,7 @@ public class NutParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3P\u0423\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3O\u0423\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -7781,7 +7780,7 @@ public class NutParser extends Parser {
 		"\u02a3\3\2\2\2\u02a0\u029e\3\2\2\2\u02a1\u02a4\5\f\7\2\u02a2\u02a4\5\24"+
 		"\13\2\u02a3\u02a1\3\2\2\2\u02a3\u02a2\3\2\2\2\u02a4\u02a7\3\2\2\2\u02a5"+
 		"\u02a7\7%\2\2\u02a6\u029e\3\2\2\2\u02a6\u02a5\3\2\2\2\u02a7{\3\2\2\2\u02a8"+
-		"\u02a9\5\u00aeX\2\u02a9\u02aa\7D\2\2\u02aa\u02ab\7P\2\2\u02ab}\3\2\2\2"+
+		"\u02a9\5\u00aeX\2\u02a9\u02aa\7D\2\2\u02aa\u02ab\7%\2\2\u02ab}\3\2\2\2"+
 		"\u02ac\u02fb\5t;\2\u02ad\u02ae\7\3\2\2\u02ae\u02b1\5\u0096L\2\u02af\u02b0"+
 		"\7-\2\2\u02b0\u02b2\5\u0096L\2\u02b1\u02af\3\2\2\2\u02b1\u02b2\3\2\2\2"+
 		"\u02b2\u02b3\3\2\2\2\u02b3\u02b4\7%\2\2\u02b4\u02fb\3\2\2\2\u02b5\u02b6"+

@@ -317,7 +317,7 @@ localTypeDeclaration
 
 declaration
     :
-    typeType IDENTIFIER SEMICOLON
+    typeType IDENTIFIER ';'
     ;
 
 statement
@@ -331,10 +331,15 @@ statement
     | RETURN expression? ';'
     | BREAK IDENTIFIER? ';'
     | SEMI
-    | PRINT '(' literal ')' ';'
-    | PRINT '(' declaration ')' ';'
+    | printStatement
     | statementExpression=expression ';'
     | identifierLabel=IDENTIFIER ':' statement
+    ;
+
+printStatement
+    :
+    | PRINT '(' literal ')' ';'
+    | PRINT '(' declaration ')' ';'
     ;
 
 resourceSpecification
