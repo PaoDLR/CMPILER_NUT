@@ -235,11 +235,11 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitVariableDeclarator(NutParser.VariableDeclaratorContext ctx) {
-		String varName = (String) visit(ctx.variableDeclaratorId());
-		String varValue = (String) visit(ctx.getChild(2));
-		stringVariable.put(varName, varValue.replaceAll("\"", ""));
+//		String varName = (String) visit(ctx.variableDeclaratorId());
+//		String varValue = (String) visit(ctx.getChild(2));
+//		stringVariable.put(varName, varValue.replaceAll("\"", ""));
 
-		System.out.println("potato" + varName + varValue.replaceAll("\"", ""));
+//		System.out.println("potato" + varName + varValue.replaceAll("\"", ""));
 		return visitChildren(ctx);
 	}
 	/**
@@ -455,7 +455,34 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLocalVariableDeclaration(NutParser.LocalVariableDeclarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLocalVariableDeclaration(NutParser.LocalVariableDeclarationContext ctx) {
+		if( ctx.getChild(0).getChild(0).getText().equals("string")){
+			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
+			String varValue = (String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			stringVariable.put(varName, varValue.replaceAll("\"", ""));
+			System.out.println("JAIOEWVIOAWHEVWHJEIOP");
+
+		}else if(ctx.getChild(0).getChild(0).getText().equals("int")){
+			visit(ctx.variableDeclarators().variableDeclarator(2));
+
+		}else if(ctx.getChild(0).getChild(0).getText().equals("boolean")){
+			visit(ctx.variableDeclarators().variableDeclarator(2));
+
+		}else if(ctx.getChild(0).getChild(0).getText().equals("char")){
+			visit(ctx.variableDeclarators().variableDeclarator(2));
+
+		}else if(ctx.getChild(0).getChild(0).getText().equals("float")){
+			visit(ctx.variableDeclarators().variableDeclarator(2));
+
+		}else if(ctx.getChild(0).getChild(0).getText().equals("double")){
+			visit(ctx.variableDeclarators().variableDeclarator(2));
+
+		}
+
+
+		return visitChildren(ctx);
+	}
 	/**
 	 * {@inheritDoc}
 	 *
