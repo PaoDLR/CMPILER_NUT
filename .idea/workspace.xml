@@ -35,11 +35,11 @@
     <property name="$PROJECT_DIR$/NutLexer.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/gen-visitor" value="true" />
-    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/NutParser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutParser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/NutParser.g4::/gen-visitor" value="true" />
-    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/Parser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
@@ -51,6 +51,18 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="ParserTree" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ParserTree" />
@@ -59,18 +71,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

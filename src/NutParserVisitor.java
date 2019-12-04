@@ -1,4 +1,4 @@
-// Generated from C:/Users/Thomasraf/IdeaProjects/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
+// Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -387,6 +387,12 @@ public interface NutParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitStatement(NutParser.StatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link NutParser#printStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrintStatement(NutParser.PrintStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link NutParser#resourceSpecification}.
 	 * @param ctx the parse tree

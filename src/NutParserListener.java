@@ -1,4 +1,4 @@
-// Generated from C:/Users/Thomasraf/IdeaProjects/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
+// Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -636,6 +636,16 @@ public interface NutParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStatement(NutParser.StatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link NutParser#printStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrintStatement(NutParser.PrintStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NutParser#printStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrintStatement(NutParser.PrintStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link NutParser#resourceSpecification}.
 	 * @param ctx the parse tree

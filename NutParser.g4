@@ -331,15 +331,15 @@ statement
     | RETURN expression? ';'
     | BREAK IDENTIFIER? ';'
     | SEMI
-    | printStatement
+    | printStatement ';'
     | statementExpression=expression ';'
     | identifierLabel=IDENTIFIER ':' statement
     ;
 
 printStatement
     :
-    | PRINT '(' literal ')' ';'
-    | PRINT '(' declaration ')' ';'
+    | PRINT '(' literal ')'
+    | PRINT '(' declaration ')'
     ;
 
 resourceSpecification
