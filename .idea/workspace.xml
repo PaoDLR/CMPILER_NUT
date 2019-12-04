@@ -3,7 +3,117 @@
   <component name="ChangeListManager">
     <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMPILER_NUT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CMPILER_NUT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationConstantRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationConstantRestContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodOrConstantRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodOrConstantRestContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationMethodRestContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeBodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeBodyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeElementDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeElementDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeElementRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$AnnotationTypeElementRestContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ArrayInitializerContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ArrayInitializerContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$BlockContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$BlockStatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$BlockStatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassBodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassBodyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassBodyDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassBodyDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassCreatorRestContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassCreatorRestContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassOrInterfaceModifierContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassOrInterfaceModifierContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassOrInterfaceTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassOrInterfaceTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ClassTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CompilationUnitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CompilationUnitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstantDeclaratorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstantDeclaratorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstructorDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ConstructorDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CreatedNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CreatedNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$CreatorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$DefaultValueContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$DefaultValueContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValueArrayInitializerContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValueArrayInitializerContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValueContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValueContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValuePairContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValuePairContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValuePairsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ElementValuePairsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$EnhancedForControlContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$EnhancedForControlContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExplicitGenericInvocationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExplicitGenericInvocationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExplicitGenericInvocationSuffixContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExplicitGenericInvocationSuffixContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExpressionListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ExpressionListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FieldDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FieldDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FloatLiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FloatLiteralContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ForControlContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ForControlContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ForInitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ForInitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParameterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParameterContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParameterListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParameterListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$FormalParametersContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericConstructorDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericConstructorDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericInterfaceMethodDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericInterfaceMethodDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericMethodDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$GenericMethodDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InnerCreatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InnerCreatorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$IntegerLiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$IntegerLiteralContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceBodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceBodyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceBodyDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceBodyDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMemberDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMemberDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMethodDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMethodDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMethodModifierContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$InterfaceMethodModifierContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LastFormalParameterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LastFormalParameterContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LiteralContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LocalTypeDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LocalTypeDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LocalVariableDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$LocalVariableDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MemberDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MemberDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodBodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodBodyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodCallContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodCallContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$MethodDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ModifierContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ModifierContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$NonWildcardTypeArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$NonWildcardTypeArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$NonWildcardTypeArgumentsOrDiamondContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$NonWildcardTypeArgumentsOrDiamondContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ParExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ParExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$PrimaryContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$PrimaryContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$PrimitiveTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$PrimitiveTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$QualifiedNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$QualifiedNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$QualifiedNameListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$QualifiedNameListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourceContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourceContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourceSpecificationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourceSpecificationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourcesContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$ResourcesContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$StatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$StatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SuperSuffixContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SuperSuffixContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SwitchBlockStatementGroupContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SwitchBlockStatementGroupContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SwitchLabelContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$SwitchLabelContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentsOrDiamondContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeArgumentsOrDiamondContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeBoundContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeBoundContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeParameterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeParameterContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeParametersContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeTypeOrVoidContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$TypeTypeOrVoidContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorIdContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorIdContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableDeclaratorsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableInitializerContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableInitializerContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableModifierContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser$VariableModifierContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserBaseVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParserVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser_test_case.txt" beforeDir="false" afterPath="$PROJECT_DIR$/parser_test_case.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParser.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NutParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +145,18 @@
     <property name="$PROJECT_DIR$/NutLexer.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/NutLexer.g4::/gen-visitor" value="true" />
-    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutLexer.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/NutParser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/NutParser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/NutParser.g4::/gen-visitor" value="true" />
-    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
+    <property name="$PROJECT_DIR$/NutParser.g4::/output-dir" value="C:\Users\Thomasraf\IdeaProjects\CMPILER_NUT\src" />
     <property name="$PROJECT_DIR$/Parser.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Parser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mu-master" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -98,9 +208,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1575378430038">
+    <state x="552" y="178" key="#Project_Structure" timestamp="1575453835318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575378430038" />
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1575453835318" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1575453303466">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575453303466" />
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom" timestamp="1575454434103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
+    <state width="1877" height="143" key="GridCell.Tab.0.center" timestamp="1575454434103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="143" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
+    <state width="1877" height="143" key="GridCell.Tab.0.left" timestamp="1575454434102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="143" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434102" />
+    <state width="1877" height="143" key="GridCell.Tab.0.right" timestamp="1575454434103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="143" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575454434103" />
   </component>
 </project>

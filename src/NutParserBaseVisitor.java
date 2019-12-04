@@ -1,7 +1,5 @@
-// Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
+// Generated from C:/Users/Thomasraf/IdeaProjects/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
-
-import javax.print.DocFlavor;
 
 /**
  * This class provides an empty implementation of {@link NutParserVisitor},
@@ -12,14 +10,11 @@ import javax.print.DocFlavor;
  * operations with no return type.
  */
 public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements NutParserVisitor<T> {
-
 	NutInterpreter nutInterpreter;
-
-	public NutParserBaseVisitor(NutInterpreter nutInterpreter){
-
-		this.nutInterpreter = nutInterpreter;
-
+	public NutParserBaseVisitor(NutInterpreter nut) {
+		nutInterpreter = nut;
 	}
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -313,9 +308,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLiteral(NutParser.LiteralContext ctx) {
-		return (T) ctx.getText();
-	}
+	@Override public T visitLiteral(NutParser.LiteralContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -455,12 +448,19 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitDeclaration(NutParser.DeclarationContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitStatement(NutParser.StatementContext ctx) {
 		if(ctx.getChild(0).getText().equals("printing")){
 			String s = (String) visit(ctx.literal());
 			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
-		}
-		return visitChildren(ctx);
+        }
+        return visitChildren(ctx);
 	}
 	/**
 	 * {@inheritDoc}

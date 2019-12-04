@@ -332,6 +332,7 @@ statement
     | BREAK IDENTIFIER? ';'
     | SEMI
     | PRINT '(' literal ')' ';'
+    | PRINT '(' declaration ')' ';'
     | statementExpression=expression ';'
     | identifierLabel=IDENTIFIER ':' statement
     ;
