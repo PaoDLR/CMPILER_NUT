@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NutInterpreter.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NutInterpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/ParserTree$NutErrorListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/ParserTree$NutErrorListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser_test_case.txt" beforeDir="false" afterPath="$PROJECT_DIR$/parser_test_case.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +22,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SCBeTxO5BgAPD8dwTKW1VZHCao" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="$PROJECT_DIR$/Lexer.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/Lexer.g4::/gen-listener" value="true" />
@@ -45,22 +45,10 @@
     <property name="$PROJECT_DIR$/Parser.g4::/gen-visitor" value="false" />
     <property name="$PROJECT_DIR$/Parser.g4::/output-dir" value="D:\School\CMPILER\MP\CMPILER_NUT\src" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mu-master" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="ParserTree" type="Application" factoryName="Application">
@@ -70,6 +58,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -96,5 +96,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1575378430038">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575378430038" />
   </component>
 </project>

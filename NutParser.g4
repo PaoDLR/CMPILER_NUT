@@ -315,6 +315,11 @@ localTypeDeclaration
     | ';'
     ;
 
+declaration
+    :
+    typeType IDENTIFIER SEMICOLON
+    ;
+
 statement
     : blockLabel=block
     | ASSERT expression (':' expression)? ';'
