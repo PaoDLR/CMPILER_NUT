@@ -1,35 +1,8 @@
-expose sleep testCode{
-    drowning func2()
-    {
-    return drowning;
-    }
-    digimon myFunc(digimon y, digimon x)
-    {
-    digimon compute = x + y * 2 + func(2);
-    return 2 + 3;
-    }
-    drowning myFunc2(drowning x)
-    {
-    drowning test = (x * 50)+(6*2));
-    return (2*5)+2(5);
-    }
-
-    kassadin main()
-    {
-    printing("Hello"+2+);
-    printing(Hi);
-    can( x=3)
-    {
-        printing("Bye");
-        digimon y = myFunc(2,3)();
-    }
-    }
-}
-
 expose sleep testCase{
 
    expose shiv kassadin main(){
-      printing("Hello world!");
+      String x = "Hello World!";
+      printing(x);
    }
 
 }
