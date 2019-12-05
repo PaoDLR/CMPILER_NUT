@@ -783,6 +783,18 @@ public class NutParserBaseListener implements NutParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterScanStatement(NutParser.ScanStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitScanStatement(NutParser.ScanStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterResourceSpecification(NutParser.ResourceSpecificationContext ctx) { }
 	/**
 	 * {@inheritDoc}

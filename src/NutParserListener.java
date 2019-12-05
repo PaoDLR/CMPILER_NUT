@@ -647,6 +647,16 @@ public interface NutParserListener extends ParseTreeListener {
 	 */
 	void exitPrintStatement(NutParser.PrintStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link NutParser#scanStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterScanStatement(NutParser.ScanStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NutParser#scanStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitScanStatement(NutParser.ScanStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link NutParser#resourceSpecification}.
 	 * @param ctx the parse tree
 	 */

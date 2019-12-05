@@ -394,6 +394,12 @@ public interface NutParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrintStatement(NutParser.PrintStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link NutParser#scanStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitScanStatement(NutParser.ScanStatementContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link NutParser#resourceSpecification}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

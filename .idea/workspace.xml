@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a4fd8b5a-5aac-4cbd-8722-a3699c6f9c6a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Text File.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The Text File.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CMPILER_NUT/NutParser.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserVisitor.java" afterDir="false" />
     </list>
@@ -116,21 +112,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575453303466" />
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom" timestamp="1575468091900">
+    <state width="1877" height="125" key="GridCell.Tab.0.bottom" timestamp="1575473975670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575468091900" />
-    <state width="1877" height="125" key="GridCell.Tab.0.center" timestamp="1575468091900">
+    <state width="1877" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575473975670" />
+    <state width="1877" height="125" key="GridCell.Tab.0.center" timestamp="1575473975670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575468091900" />
-    <state width="1877" height="125" key="GridCell.Tab.0.left" timestamp="1575468091900">
+    <state width="1877" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575473975670" />
+    <state width="1877" height="125" key="GridCell.Tab.0.left" timestamp="1575473975670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575468091900" />
-    <state width="1877" height="125" key="GridCell.Tab.0.right" timestamp="1575468091900">
+    <state width="1877" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575473975670" />
+    <state width="1877" height="125" key="GridCell.Tab.0.right" timestamp="1575473975670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575468091900" />
+    <state width="1877" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575473975670" />
   </component>
 </project>

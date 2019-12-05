@@ -342,6 +342,11 @@ printStatement
     | PRINT '(' qualifiedName ')'
     ;
 
+scanStatement
+    :
+    | '(' literal ')'
+    ;
+
 resourceSpecification
     : '(' resources ';'? ')'
     ;
