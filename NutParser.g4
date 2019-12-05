@@ -344,8 +344,8 @@ printStatement
 
 scanStatement
     :
-    | '(' literal ')'
-    | '(' ')'
+    | typeType INDENTIFIER '=' SCAN '(' literal ')'
+    | typeType INDENTIFIER '=' SCAN '(' ')'
     ;
 
 resourceSpecification
