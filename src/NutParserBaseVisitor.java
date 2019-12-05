@@ -537,6 +537,16 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 		}
 		return visitChildren(ctx);
 	}
+
+	@Override
+	public T visitScanStatement(NutParser.ScanStatementContext ctx) {
+		if(ctx.getChild(0).getText().equals("scan") && ctx.getChild(2) instanceof NutParser.LiteralContext){
+			String s = (String) visit(ctx.literal());
+			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
+		}
+		return visitChildren(ctx);
+	}
+
 	/**
 	 * {@inheritDoc}
 	 *
