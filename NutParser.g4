@@ -345,6 +345,7 @@ printStatement
 scanStatement
     :
     | '(' literal ')'
+    | '(' ')'
     ;
 
 resourceSpecification

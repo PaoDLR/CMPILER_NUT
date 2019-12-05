@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/NutParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/NutParser.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NutParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NutParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NutParserVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +105,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1575453835318" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1575554027720">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1575554027720" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1575453303466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
