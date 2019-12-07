@@ -462,10 +462,9 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	@Override public T visitLocalVariableDeclaration(NutParser.LocalVariableDeclarationContext ctx) {
 		if( ctx.getChild(0).getChild(0).getText().equals("string")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			String varValue = (String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+			String varValue = (String) ctx.variableDeclarators().variableDeclarator(0).getChild(2).getText();
 
 			stringVariable.put(varName, varValue.replaceAll("\"", ""));
-
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("int")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
@@ -601,9 +600,35 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			String s = ctx.literal().getChild(0).getText();
 			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
 		}else if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.QualifiedNameContext){
-			String s = (String) visit(ctx.qualifiedName());
-			String varName = stringVariable.get((String) visit(ctx.qualifiedName()));
-			nutInterpreter.setOutputStream(varName);
+			String s = ctx.qualifiedName().getText();
+
+			if(stringVariable.containsKey(s)){
+				String varName = stringVariable.get(s);
+				nutInterpreter.setOutputStream(varName);
+			}else if(charVariable.containsKey(s)){
+				char varName = charVariable.get(s);
+				nutInterpreter.setOutputStream(Character.toString(varName));
+			}else if(intVariable.containsKey(s)){
+				int varName = intVariable.get(s);
+				nutInterpreter.setOutputStream(Integer.toString(varName));
+			}else if(floatVariable.containsKey(s)){
+				float varName = floatVariable.get(s);
+				nutInterpreter.setOutputStream(Float.toString(varName));
+			}else if(doubleVariable.containsKey(s)){
+				double varName = doubleVariable.get(s);
+				nutInterpreter.setOutputStream(Double.toString(varName));
+			}else if(booleanVariable.containsKey(s)){
+				boolean varName = booleanVariable.get(s);
+				nutInterpreter.setOutputStream(Boolean.toString(varName));
+			}
+
+
+		}else if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.ExpressionContext){
+			String expr = ctx.expression().getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
 		}
 		return visitChildren(ctx);
 	}
@@ -703,6 +728,15 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitExpression(NutParser.ExpressionContext ctx) {
+
+//		if(ctx.getParent() instanceof NutParser.PrintStatementContext){
+//			String expr = ctx.getText();
+//			System.out.println("Expression " + expr);
+//			Expression e = new ExpressionBuilder(expr).build();
+//			System.out.println(e.evaluate());
+//
+//			return (T) e.evaluate();
+//		}
 		return visitChildren(ctx);
 	}
 	/**
