@@ -1,5 +1,8 @@
 // Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
+import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.HashMap;
 
@@ -256,7 +259,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVariableInitializer(NutParser.VariableInitializerContext ctx) { return (T) ctx.getText(); }
+	@Override public T visitVariableInitializer(NutParser.VariableInitializerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -329,7 +332,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitLiteral(NutParser.LiteralContext ctx) {
-		return (T) ctx.getText();
+		return visitChildren(ctx);
 	}
 	/**
 	 * {@inheritDoc}
@@ -466,7 +469,12 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("int")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			int varValue = (Integer) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+			int varValue = (int) e.evaluate();
 
 			intVariable.put(varName, varValue);
 
@@ -484,13 +492,23 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("float")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			float varValue = (Float) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+			float varValue = (float) e.evaluate();
 
 			floatVariable.put(varName, varValue);
 
 		}else if(ctx.getChild(0).getChild(0).getText().equals("double")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			double varValue = (Double) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+
+			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+			double varValue = (double) e.evaluate();
 
 			doubleVariable.put(varName, varValue);
 
@@ -519,7 +537,59 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement(NutParser.StatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatement(NutParser.StatementContext ctx) {
+		if(ctx.children.contains(ctx.expression(0))){
+			String expr = ctx.expression(0).getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+		}
+
+//		if(ctx.getChildCount() == 3){
+//
+//
+//			String operation = ctx.getChild(1).getText();							//gets operation in the middle
+//			System.out.println("operation " + operation);
+//
+//			if(ctx.getChild(0).getChild(0) instanceof NutParser.ExpressionContext){	//check if child's child is expression
+//
+//				if(operation.equals("+")){
+//					return 	(Integer) visitExpression(ctx.expression(0)) + (Integer) visitExpression(ctx.expression(1));
+//				}
+//
+//				ctx.
+//
+//			}else{
+//				ParseTree literalPt = ctx.primary().literal().getChild(0);
+//				int val1;
+//				ctx.expression();
+//				if(literalPt instanceof NutParser.IntegerLiteralContext ){
+//					val1 = Integer.parseInt(literalPt.getText());
+//					System.out.println("val1 "+val1);
+//
+//				}else if(literalPt instanceof NutParser.FloatLiteralContext){
+//
+//				}
+//
+//				ParseTree literalPt2= ctx.primary().literal().getChild(0);
+//				int val2;
+//
+//				if(literalPt2 instanceof NutParser.IntegerLiteralContext ){
+//					val2 = Integer.parseInt(literalPt2.getText());
+//					System.out.println("val2 "+val2);
+//
+//				}else if(literalPt2 instanceof NutParser.FloatLiteralContext){
+//
+//				}
+//
+//			}
+//		}else{
+//
+//		}
+
+
+		return visitChildren(ctx);
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -528,7 +598,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 */
 	@Override public T visitPrintStatement(NutParser.PrintStatementContext ctx) {
 		if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.LiteralContext){
-			String s = (String) visit(ctx.literal());
+			String s = ctx.literal().getChild(0).getText();
 			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
 		}else if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.QualifiedNameContext){
 			String s = (String) visit(ctx.qualifiedName());
@@ -537,6 +607,16 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 		}
 		return visitChildren(ctx);
 	}
+
+	@Override
+	public T visitScanStatement(NutParser.ScanStatementContext ctx) {
+		if(ctx.getChild(0).getText().equals("scan") && ctx.getChild(2) instanceof NutParser.LiteralContext){
+			String s = (String) visit(ctx.literal());
+			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
+		}
+		return visitChildren(ctx);
+	}
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -606,7 +686,9 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressionList(NutParser.ExpressionListContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionList(NutParser.ExpressionListContext ctx) {
+		return visitChildren(ctx);
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -620,14 +702,16 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(NutParser.ExpressionContext ctx) { return (T) ctx.getText(); }
+	@Override public T visitExpression(NutParser.ExpressionContext ctx) {
+		return visitChildren(ctx);
+	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrimary(NutParser.PrimaryContext ctx) { return (T) ctx.getText(); }
+	@Override public T visitPrimary(NutParser.PrimaryContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

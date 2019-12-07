@@ -340,6 +340,7 @@ printStatement
     :
     | PRINT '(' literal ')'
     | PRINT '(' qualifiedName ')'
+    | PRINT '(' expression ')'
     ;
 
 scanStatement
