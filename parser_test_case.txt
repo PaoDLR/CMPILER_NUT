@@ -5,3 +5,11 @@ expose sleep testCase{
                      printing(x);
                   }
                }
+
+expose sleep testCase{
+    expose shiv kassadin main(){
+        maybe x = false;
+        scan(x);
+        printing(x);
+    }
+}

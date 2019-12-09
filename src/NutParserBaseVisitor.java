@@ -630,22 +630,63 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			System.out.println(e.evaluate());
 			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
 		}
-		else if(ctx.getChild(0).getText().equals("fantasy") && ctx.getChild(2) instanceof NutParser.ExpressionContext){
-			String expr = ctx.expression().getText();
-			System.out.println("Expression " + expr);
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
-			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
-		}
 		return visitChildren(ctx);
 	}
 
 	@Override
 	public T visitScanStatement(NutParser.ScanStatementContext ctx) {
-		if(ctx.getChild(0).getText().equals("scan") && ctx.getChild(2) instanceof NutParser.LiteralContext){
-			String s = (String) visit(ctx.literal());
-			nutInterpreter.setOutputStream(s.replaceAll("\"", ""));
+		String splice = ctx.getText().replaceAll("\\(", ",");
+		String[] split1 = splice.split(",");
+		String split2 = split1[1].replaceAll("\\)", "");
+		System.out.println(split2);
+
+		//String
+		if(ctx.getChild(0).getText().equals("scan") && stringVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			stringVariable.put(split2, nutInterpreter.valueOfScan());
+		}//Integer
+		else if(ctx.getChild(0).getText().equals("scan") && intVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			if(nutInterpreter.valueOfScan().matches("[0-9]+")) {
+				intVariable.put(split2, Integer.parseInt(nutInterpreter.valueOfScan()));
+			}else{
+				System.out.println("Error message!");
+			}
+		}//Boolean
+		else if(ctx.getChild(0).getText().equals("scan") && booleanVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			if(nutInterpreter.valueOfScan().equalsIgnoreCase("true") | nutInterpreter.valueOfScan().equalsIgnoreCase("false")) {
+				booleanVariable.put(split2, Boolean.parseBoolean(nutInterpreter.valueOfScan()));
+			}else{
+				System.out.println("Error message!");
+			}
+
+		}//Character
+		else if(ctx.getChild(0).getText().equals("scan") && charVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			if(nutInterpreter.valueOfScan().matches("[A-z]")){
+				charVariable.put(split2, nutInterpreter.valueOfScan().charAt(0));
+			}else{
+				System.out.println("Error message!");
+			}
+		}//Float
+		else if(ctx.getChild(0).getText().equals("scan") && floatVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
+				floatVariable.put(split2, Float.parseFloat(nutInterpreter.valueOfScan()));
+			}else{
+				System.out.println("Error message!");
+			}
+		}//Double
+		else if(ctx.getChild(0).getText().equals("scan") && doubleVariable.containsKey(split2)){
+			nutInterpreter.newScanner("Scan statement");
+			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
+				doubleVariable.put(split2, Double.parseDouble(nutInterpreter.valueOfScan()));
+			}else{
+				System.out.println("Error message!");
+			}
 		}
+
 		return visitChildren(ctx);
 	}
 

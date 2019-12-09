@@ -332,6 +332,7 @@ statement
     | BREAK IDENTIFIER? ';'
     | SEMI
     | printStatement ';'
+    | scanStatement ';'
     | statementExpression=expression ';'
     | identifierLabel=IDENTIFIER ':' statement
     ;
@@ -345,8 +346,7 @@ printStatement
 
 scanStatement
     :
-    | typeType INDENTIFIER '=' SCAN '(' literal ')'
-    | typeType INDENTIFIER '=' SCAN '(' ')'
+    | SCAN '(' IDENTIFIER ')'
     ;
 
 resourceSpecification

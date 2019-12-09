@@ -4,6 +4,7 @@ import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
@@ -16,6 +17,7 @@ public class NutInterpreter extends JFrame{
     private JPanel interpreterPanel;
     private JButton clearOutput;
     private NutInterpreter nut;
+    private String result;
 
     public NutInterpreter(String interpreter){
         super(interpreter);
@@ -64,6 +66,28 @@ public class NutInterpreter extends JFrame{
 
     public String getInputStream(){
        return inputStream.getText();
+    }
+
+    public String valueOfScan(){
+        return result;
+    }
+
+    public void newScanner(String title){
+        Dialog diag = new Dialog(this, title, true);
+        JPanel p = new JPanel();
+        JTextField diagTextField = new JTextField(30);
+        JButton okayBtn = new JButton(new AbstractAction("Okay") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                result = diagTextField.getText();
+                diag.dispose();
+            }
+        });
+        p.add(diagTextField);
+        p.add(okayBtn);
+        diag.add(p);
+        diag.pack();
+        diag.setVisible(true);
     }
 
     public void setOutputStream(String text){

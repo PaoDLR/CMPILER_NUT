@@ -1,4 +1,4 @@
-// Generated from C:/Users/Ashen One/Desktop/CMPILER_NUT\NutLexer.g4 by ANTLR 4.7.2
+// Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutLexer.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
