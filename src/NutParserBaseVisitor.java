@@ -630,6 +630,13 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			System.out.println(e.evaluate());
 			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
 		}
+		else if(ctx.getChild(0).getText().equals("fantasy") && ctx.getChild(2) instanceof NutParser.ExpressionContext){
+			String expr = ctx.expression().getText();
+			System.out.println("Expression " + expr);
+			Expression e = new ExpressionBuilder(expr).build();
+			System.out.println(e.evaluate());
+			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
+		}
 		return visitChildren(ctx);
 	}
 
