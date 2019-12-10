@@ -244,7 +244,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 //		stringVariable.put(varName, varValue.replaceAll("\"", ""));
 
 //		System.out.println("potato" + varName + varValue.replaceAll("\"", ""));
-		return visitChildren(ctx);
+		return (T) ctx.getText();
 	}
 	/**
 	 * {@inheritDoc}
@@ -466,30 +466,48 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 			stringVariable.put(varName, varValue.replaceAll("\"", ""));
 
-		}else if(ctx.getChild(0).getChild(0).getText().equals("int")){
+		}else if(ctx.getChild(0).getChild(0).getText().equals("digimon")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
 
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
 			System.out.println("Expression " + expr);
+
+			if(expr.contains("x") && intVariable.containsKey("x")){
+				expr = expr.replace('x', Integer.toString(intVariable.get("x")).charAt(0));
+			}
+
+			if(expr.contains("y") && intVariable.containsKey("y")){
+				expr = expr.replace('y', Integer.toString(intVariable.get("y")).charAt(0));
+			}
+
+			if(expr.contains("z") && intVariable.containsKey("z")){
+				expr = expr.replace('z', Integer.toString(intVariable.get("z")).charAt(0));
+			}
+
+			System.out.println("Expression 2.0 " + expr);
+
 			Expression e = new ExpressionBuilder(expr).build();
 			System.out.println(e.evaluate());
 			int varValue = (int) e.evaluate();
 
 			intVariable.put(varName, varValue);
 
-		}else if(ctx.getChild(0).getChild(0).getText().equals("boolean")){
+		}else if(ctx.getChild(0).getChild(0).getText().equals("maybe")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			boolean varValue = (Boolean) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+			System.out.println((String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(0)));
+			boolean varValue = Boolean.parseBoolean((String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(0)));
 
 			booleanVariable.put(varName, varValue);
 
-		}else if(ctx.getChild(0).getChild(0).getText().equals("char")){
+		}else if(ctx.getChild(0).getChild(0).getText().equals("charot")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
-			char varValue = (Character) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(2));
+			String toCharz = (String) visit(ctx.variableDeclarators().variableDeclarator(0).getChild(0));
+			System.out.println(toCharz);
+			char varValue = toCharz.charAt(0);
 
 			charVariable.put(varName, varValue);
 
-		}else if(ctx.getChild(0).getChild(0).getText().equals("float")){
+		}else if(ctx.getChild(0).getChild(0).getText().equals("drown")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
 
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
@@ -500,7 +518,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 			floatVariable.put(varName, varValue);
 
-		}else if(ctx.getChild(0).getChild(0).getText().equals("double")){
+		}else if(ctx.getChild(0).getChild(0).getText().equals("twice")){
 			String varName = (String) visit(ctx.variableDeclarators().variableDeclarator(0).variableDeclaratorId());
 
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
@@ -537,11 +555,9 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitStatement(NutParser.StatementContext ctx) {
-		if(ctx.children.contains(ctx.expression(0))){
-			String expr = ctx.expression(0).getText();
-			System.out.println("Expression " + expr);
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
+		System.out.println(ctx.children.contains(ctx.expression(0)));
+		if(ctx.getChild(0).getText().contains("can")){
+			System.out.println("sup");
 		}
 
 //		if(ctx.getChildCount() == 3){
@@ -650,7 +666,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			if(nutInterpreter.valueOfScan().matches("[0-9]+")) {
 				intVariable.put(split2, Integer.parseInt(nutInterpreter.valueOfScan()));
 			}else{
-				System.out.println("Error message!");
+				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a digimon!");
 			}
 		}//Boolean
 		else if(ctx.getChild(0).getText().equals("scan") && booleanVariable.containsKey(split2)){
@@ -658,7 +674,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			if(nutInterpreter.valueOfScan().equalsIgnoreCase("true") | nutInterpreter.valueOfScan().equalsIgnoreCase("false")) {
 				booleanVariable.put(split2, Boolean.parseBoolean(nutInterpreter.valueOfScan()));
 			}else{
-				System.out.println("Error message!");
+				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a maybe!");
 			}
 
 		}//Character
@@ -667,7 +683,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			if(nutInterpreter.valueOfScan().matches("[A-z]")){
 				charVariable.put(split2, nutInterpreter.valueOfScan().charAt(0));
 			}else{
-				System.out.println("Error message!");
+				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a charot!");
 			}
 		}//Float
 		else if(ctx.getChild(0).getText().equals("scan") && floatVariable.containsKey(split2)){
@@ -675,7 +691,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
 				floatVariable.put(split2, Float.parseFloat(nutInterpreter.valueOfScan()));
 			}else{
-				System.out.println("Error message!");
+				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a drowning!");
 			}
 		}//Double
 		else if(ctx.getChild(0).getText().equals("scan") && doubleVariable.containsKey(split2)){
@@ -683,7 +699,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
 				doubleVariable.put(split2, Double.parseDouble(nutInterpreter.valueOfScan()));
 			}else{
-				System.out.println("Error message!");
+				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a twice");
 			}
 		}
 
