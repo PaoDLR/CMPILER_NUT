@@ -8,8 +8,11 @@ expose sleep testCase{
 
 expose sleep testCase{
     expose shiv kassadin main(){
-        maybe x = false;
-        scan(x);
-        printing(x);
+        digimon x = 1;
+        can(x == 2){
+            printing("Emir");
+        }unless{
+            printing("Rafael");
+        }
     }
 }

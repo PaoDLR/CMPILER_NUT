@@ -1,9 +1,8 @@
 // Generated from D:/School/CMPILER/MP/CMPILER_NUT\NutParser.g4 by ANTLR 4.7.2
-import net.objecthunter.exp4j.Expression;
-import net.objecthunter.exp4j.ExpressionBuilder;
+import com.udojava.evalex.Expression;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
-import org.antlr.v4.runtime.tree.ParseTree;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 
 /**
@@ -16,13 +15,13 @@ import java.util.HashMap;
  */
 public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements NutParserVisitor<T> {
 
-	NutInterpreter nutInterpreter;
-	HashMap<String, String> stringVariable = new HashMap<String, String>();
-	HashMap<String, Character> charVariable = new HashMap<String, Character>();
-	HashMap<String, Integer> intVariable = new HashMap<String, Integer>();
-	HashMap<String, Float> floatVariable = new HashMap<String, Float>();
-	HashMap<String, Double> doubleVariable = new HashMap<String, Double>();
-	HashMap<String, Boolean> booleanVariable = new HashMap<String, Boolean>();
+	private NutInterpreter nutInterpreter;
+	private HashMap<String, String> stringVariable = new HashMap<String, String>();
+	private HashMap<String, Character> charVariable = new HashMap<String, Character>();
+	private HashMap<String, Integer> intVariable = new HashMap<String, Integer>();
+	private HashMap<String, Float> floatVariable = new HashMap<String, Float>();
+	private HashMap<String, Double> doubleVariable = new HashMap<String, Double>();
+	private HashMap<String, Boolean> booleanVariable = new HashMap<String, Boolean>();
 
 	public NutParserBaseVisitor(NutInterpreter nutInterpreter){
 
@@ -472,23 +471,18 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
 			System.out.println("Expression " + expr);
 
-			if(expr.contains("x") && intVariable.containsKey("x")){
-				expr = expr.replace('x', Integer.toString(intVariable.get("x")).charAt(0));
+			String temp = expr;
+			temp = temp.replaceAll("[-+/*><^!]", ",");
+			String[] split = temp.split(",");
+
+			for(int i = 0; i < split.length; i++){
+				if(expr.contains(split[i]) && intVariable.containsKey(split[i])){
+					expr = expr.replace(split[i].charAt(0), Integer.toString(intVariable.get(split[i])).charAt(0));
+				}
 			}
 
-			if(expr.contains("y") && intVariable.containsKey("y")){
-				expr = expr.replace('y', Integer.toString(intVariable.get("y")).charAt(0));
-			}
-
-			if(expr.contains("z") && intVariable.containsKey("z")){
-				expr = expr.replace('z', Integer.toString(intVariable.get("z")).charAt(0));
-			}
-
-			System.out.println("Expression 2.0 " + expr);
-
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
-			int varValue = (int) e.evaluate();
+			Expression expression = new Expression(expr);
+			int varValue = expression.eval().intValue();
 
 			intVariable.put(varName, varValue);
 
@@ -512,9 +506,21 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
 			System.out.println("Expression " + expr);
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
-			float varValue = (float) e.evaluate();
+
+			Expression e = new Expression(expr);
+
+			String temp = expr;
+			temp = temp.replaceAll("[-+/*><^!]", ",");
+			String[] split = temp.split(",");
+
+			for(int i = 0; i < split.length; i++){
+				if(expr.contains(split[i]) && floatVariable.containsKey(split[i])){
+					expr = expr.replace(split[i].charAt(0), Float.toString(floatVariable.get(split[i])).charAt(0));
+				}
+			}
+
+			System.out.println(e.eval());
+			float varValue = e.eval().floatValue();
 
 			floatVariable.put(varName, varValue);
 
@@ -523,9 +529,19 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 
 			String expr = ctx.variableDeclarators().variableDeclarator(0).variableInitializer().expression().getText();
 			System.out.println("Expression " + expr);
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
-			double varValue = (double) e.evaluate();
+
+			String temp = expr;
+			temp = temp.replaceAll("[-+/*><^!]", ",");
+			String[] split = temp.split(",");
+
+			for(int i = 0; i < split.length; i++){
+				if(expr.contains(split[i]) && doubleVariable.containsKey(split[i])){
+					expr = expr.replace(split[i].charAt(0), Double.toString(doubleVariable.get(split[i])).charAt(0));
+				}
+			}
+
+			Expression e = new Expression(expr);
+			double varValue = e.eval().doubleValue();
 
 			doubleVariable.put(varName, varValue);
 
@@ -557,51 +573,32 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	@Override public T visitStatement(NutParser.StatementContext ctx) {
 		System.out.println(ctx.children.contains(ctx.expression(0)));
 		if(ctx.getChild(0).getText().contains("can")){
-			System.out.println("sup");
+			String splitz = ctx.getChild(1).getText().replaceAll("\\(", "");
+			splitz = splitz.replaceAll("\\)", "");
+			String temp = splitz;
+			temp = splitz.replaceAll("[-+/*><^!=]", ",");
+			String[] splice = temp.split(",");
+
+			for(int i = 0; i < splice.length; i++){
+				if(splitz.contains(splice[i]) && intVariable.containsKey(splice[i])){
+					splitz = splitz.replace(splice[i].charAt(0), Integer.toString(intVariable.get(splice[i])).charAt(0));
+				}else if(splitz.contains(splice[i]) && floatVariable.containsKey(splice[i])){
+					splitz = splitz.replace(splice[i].charAt(0), Float.toString(floatVariable.get(splice[i])).charAt(0));
+				}else if(splitz.contains(splice[i]) && doubleVariable.containsKey(splice[i])){
+					splitz = splitz.replace(splice[i].charAt(0), Double.toString(doubleVariable.get(splice[i])).charAt(0));
+				}
+			}
+			System.out.println(splitz);
+			Expression expression = new Expression(splitz);
+			//checks if, if if is not true, proceed to else.
+			if(expression.eval() == BigDecimal.valueOf(1)){
+				return this.visit(ctx.statement(0));
+			}else{
+				if(ctx.ELSE() != null){
+					return this.visit(ctx.statement(1));
+				}
+			}
 		}
-
-//		if(ctx.getChildCount() == 3){
-//
-//
-//			String operation = ctx.getChild(1).getText();							//gets operation in the middle
-//			System.out.println("operation " + operation);
-//
-//			if(ctx.getChild(0).getChild(0) instanceof NutParser.ExpressionContext){	//check if child's child is expression
-//
-//				if(operation.equals("+")){
-//					return 	(Integer) visitExpression(ctx.expression(0)) + (Integer) visitExpression(ctx.expression(1));
-//				}
-//
-//				ctx.
-//
-//			}else{
-//				ParseTree literalPt = ctx.primary().literal().getChild(0);
-//				int val1;
-//				ctx.expression();
-//				if(literalPt instanceof NutParser.IntegerLiteralContext ){
-//					val1 = Integer.parseInt(literalPt.getText());
-//					System.out.println("val1 "+val1);
-//
-//				}else if(literalPt instanceof NutParser.FloatLiteralContext){
-//
-//				}
-//
-//				ParseTree literalPt2= ctx.primary().literal().getChild(0);
-//				int val2;
-//
-//				if(literalPt2 instanceof NutParser.IntegerLiteralContext ){
-//					val2 = Integer.parseInt(literalPt2.getText());
-//					System.out.println("val2 "+val2);
-//
-//				}else if(literalPt2 instanceof NutParser.FloatLiteralContext){
-//
-//				}
-//
-//			}
-//		}else{
-//
-//		}
-
 
 		return visitChildren(ctx);
 	}
@@ -642,9 +639,9 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 		}else if(ctx.getChild(0).getText().equals("printing") && ctx.getChild(2) instanceof NutParser.ExpressionContext){
 			String expr = ctx.expression().getText();
 			System.out.println("Expression " + expr);
-			Expression e = new ExpressionBuilder(expr).build();
-			System.out.println(e.evaluate());
-			nutInterpreter.setOutputStream(Double.toString(e.evaluate()));
+			Expression e = new Expression(expr);
+			System.out.println(e.eval());
+			nutInterpreter.setOutputStream(Double.toString(e.eval().doubleValue()));
 		}
 		return visitChildren(ctx);
 	}
@@ -657,11 +654,11 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 		System.out.println(split2);
 
 		//String
-		if(ctx.getChild(0).getText().equals("scan") && stringVariable.containsKey(split2)){
+		if(ctx.getChild(0).getText().equals("xray") && stringVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			stringVariable.put(split2, nutInterpreter.valueOfScan());
 		}//Integer
-		else if(ctx.getChild(0).getText().equals("scan") && intVariable.containsKey(split2)){
+		else if(ctx.getChild(0).getText().equals("xray") && intVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			if(nutInterpreter.valueOfScan().matches("[0-9]+")) {
 				intVariable.put(split2, Integer.parseInt(nutInterpreter.valueOfScan()));
@@ -669,7 +666,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a digimon!");
 			}
 		}//Boolean
-		else if(ctx.getChild(0).getText().equals("scan") && booleanVariable.containsKey(split2)){
+		else if(ctx.getChild(0).getText().equals("xray") && booleanVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			if(nutInterpreter.valueOfScan().equalsIgnoreCase("true") | nutInterpreter.valueOfScan().equalsIgnoreCase("false")) {
 				booleanVariable.put(split2, Boolean.parseBoolean(nutInterpreter.valueOfScan()));
@@ -678,7 +675,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 			}
 
 		}//Character
-		else if(ctx.getChild(0).getText().equals("scan") && charVariable.containsKey(split2)){
+		else if(ctx.getChild(0).getText().equals("xray") && charVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			if(nutInterpreter.valueOfScan().matches("[A-z]")){
 				charVariable.put(split2, nutInterpreter.valueOfScan().charAt(0));
@@ -686,7 +683,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a charot!");
 			}
 		}//Float
-		else if(ctx.getChild(0).getText().equals("scan") && floatVariable.containsKey(split2)){
+		else if(ctx.getChild(0).getText().equals("xray") && floatVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
 				floatVariable.put(split2, Float.parseFloat(nutInterpreter.valueOfScan()));
@@ -694,7 +691,7 @@ public class NutParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 				nutInterpreter.setOutputStream("Variable type error! Variable " + split2 + " is not a drowning!");
 			}
 		}//Double
-		else if(ctx.getChild(0).getText().equals("scan") && doubleVariable.containsKey(split2)){
+		else if(ctx.getChild(0).getText().equals("xray") && doubleVariable.containsKey(split2)){
 			nutInterpreter.newScanner("Scan statement");
 			if(nutInterpreter.valueOfScan().matches("[-+]?[0-9]*\\.?[0-9]+")){
 				doubleVariable.put(split2, Double.parseDouble(nutInterpreter.valueOfScan()));

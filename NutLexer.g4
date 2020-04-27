@@ -27,7 +27,7 @@ PRINT: 'printing';
 PRIVATE: 'stealth';
 PUBLIC: 'expose';
 RETURN: 'ups';
-SCAN: 'scan';
+SCAN: 'xray';
 STATIC: 'shiv'; // We don't need it (Pao)
 STRING: 'string';
 SWITCH: 'nintendo';

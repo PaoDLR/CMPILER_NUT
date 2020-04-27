@@ -96,7 +96,7 @@ public class NutParser extends Parser {
 			null, "'tpose'", "'maybe'", "'ubreak'", "'case'", "'charot'", "'sleep'", 
 			"'ant'", "'standard'", "'glaz'", "'twice'", "'unless'", "'fantasy'", 
 			"'drown'", "'iv'", "'can'", "'digimon'", "'ux'", "'new'", "'printing'", 
-			"'stealth'", "'expose'", "'ups'", "'scan'", "'shiv'", "'string'", "'nintendo'", 
+			"'stealth'", "'expose'", "'ups'", "'xray'", "'shiv'", "'string'", "'nintendo'", 
 			"'kassadin'", "'during'", "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", 
 			"','", "'.'", "'\"'", "'='", "'>'", "'<'", "'!'", "':'", "'=='", "'<='", 
 			"'>='", "'!='", "'also'", "'or'", "'++'", "'--'", "'+'", "'-'", "'*'", 
